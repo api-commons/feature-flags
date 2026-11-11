@@ -1,0 +1,37 @@
+provider: eppo
+apis_io: https://apis.io/providers/eppo/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - flags
+    properties:
+      name: name
+      description: description
+      enabled: enabled
+      key: key
+      variations: variations
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/eppo-openapi.yml#DELETE /flags/{flagKey}
+    - openapi/_original/eppo-openapi.yml#GET /flags
+    - openapi/_original/eppo-openapi.yml#GET /flags/{flagKey}
+    - openapi/_original/eppo-openapi.yml#PATCH /flags/{flagKey}
+    - openapi/_original/eppo-openapi.yml#POST /flags
+  experiment:
+    path_segment:
+    - experiments
+    properties:
+      id: id
+      name: name
+      description: description
+      status: status
+      ended_at: endDate
+      started_at: startDate
+      variations: variations
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/eppo-openapi.yml#GET /experiments
+    - openapi/_original/eppo-openapi.yml#GET /experiments/{experimentId}
+    - openapi/_original/eppo-openapi.yml#POST /experiments

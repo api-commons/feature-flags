@@ -1,0 +1,91 @@
+provider: flagsmith
+apis_io: https://apis.io/providers/flagsmith/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - features
+    - flags
+    properties:
+      name: name
+      description: description
+      enabled: enabled
+      id:
+      - id
+      - uuid
+      metadata:
+      - tags
+      - metadata
+      created_at: created_date
+      type: type
+      project_id: project
+      reason: reason
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/flagsmith-admin-api-openapi.yml#DELETE /projects/{project_id}/features/{feature_id}/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/features/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/features/{feature_id}/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#POST /projects/{project_id}/features/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#PUT /projects/{project_id}/features/{feature_id}/
+  flag_environment:
+    path_segment:
+    - environments
+    properties:
+      name: name
+      id:
+      - id
+      - uuid
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flagsmith-admin-api-openapi.yml#GET /environments/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#GET /environments/{environment_api_key}/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#PUT /environments/{environment_api_key}/
+    - openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/environments/{api_key}/
+    - openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/
+  flag_segment:
+    path_segment:
+    - segments
+    - segment
+    - cohorts
+    properties:
+      description: description
+      id:
+      - id
+      - uuid
+      name: name
+      created_at: created_at
+      rules:
+      - rules
+      - conditions
+      metadata: metadata
+      updated_at: updated_at
+      project: project
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flagsmith-admin-api-openapi.yml#DELETE /projects/{project_id}/segments/{segment_id}/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/segments/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/segments/{segment_id}/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#POST /projects/{project_id}/segments/
+    - openapi/_original/flagsmith-admin-api-openapi.yml#PUT /projects/{project_id}/segments/{segment_id}/
+  experiment:
+    path_segment:
+    - experiments
+    properties:
+      id: id
+      name: name
+      status: status
+      created_at: created_at
+      ended_at: ended_at
+      started_at: started_at
+      metrics: metrics
+      updated_at: updated_at
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/environments/{environment_api_key}/experiments/{experiment_id}/
+    - openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/experiments/
+    - openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/experiments/{experiment_id}/
+    - openapi/_original/flagsmith-api-openapi.json#PATCH /api/v1/environments/{environment_api_key}/experiments/{experiment_id}/
+    - openapi/_original/flagsmith-api-openapi.json#POST /api/v1/environments/{environment_api_key}/experiments/

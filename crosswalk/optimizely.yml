@@ -1,0 +1,92 @@
+provider: optimizely
+apis_io: https://apis.io/providers/optimizely/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - flags
+    properties:
+      name: name
+      description: description
+      enabled: archived
+      id: id
+      key: key
+      metadata: custom_fields
+      created_at: created
+      variations: variations
+      updated_at: last_modified
+      project_id: project_id
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#DELETE /projects/{project_id}/flags/{flag_key}
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /projects/{project_id}/flags
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /projects/{project_id}/flags/{flag_key}
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#PATCH /projects/{project_id}/flags/{flag_key}
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#POST /projects/{project_id}/flags
+  flag_environment:
+    path_segment:
+    - environments
+    properties:
+      name: name
+      id: id
+      created_at: created
+      key: key
+      updated_at: last_modified
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /environments
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /environments/{environment_id}
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#PATCH /environments/{environment_id}
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#POST /environments
+    - openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#GET
+      /projects/{project_id}/environments
+  flag_segment:
+    path_segment:
+    - audiences
+    - segments
+    properties:
+      description: description
+      id: id
+      name: name
+      created_at: created
+      rules: conditions
+      metadata: metadata
+      updated_at: last_modified
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/optimizely-data-platform-openapi.yml#GET /segments
+    - openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#DELETE /segments/{segment_id}
+    - openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#GET /segments
+    - openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#GET /segments/{segment_id}
+    - openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#POST /segments/{segment_id}
+  experiment:
+    path_segment:
+    - experiments
+    properties:
+      id:
+      - id
+      - experiment_id
+      name: name
+      description: description
+      status: status
+      created_at:
+      - createdOn
+      - created
+      key:
+      - feature_key
+      - key
+      metrics:
+      - metric
+      - metrics
+      type: type
+      updated_at: last_modified
+      variations: variations
+    core_coverage: 0.714
+    evidence:
+    - openapi/_original/optimizely-configured-commerce-admin-api-v1-openapi.json#GET /api/v1/admin/Experiments
+    - openapi/_original/optimizely-configured-commerce-admin-api-v1-openapi.json#POST /api/v1/admin/Experiments
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#DELETE /experiments/{experiment_id}
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /experiments
+    - openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /experiments/{experiment_id}

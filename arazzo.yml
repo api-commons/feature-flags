@@ -1,0 +1,44 @@
+arazzo: 1.0.1
+info:
+  title: Feature Flags workflows (API Commons)
+  version: 0.1.0-draft.20261111
+  summary: Reference workflows over the common Feature Flags operations.
+  description: 'Reference compositions of the operations this context''s providers share. Not measured: every step
+    is a core- or extended-tier operation of the common OpenAPI, so the workflow runs against any provider that
+    implements those operations (see crosswalk/).'
+sourceDescriptions:
+- name: feature-flags
+  url: ./openapi.yml
+  type: openapi
+workflows:
+- workflowId: target-a-flag
+  summary: Create a segment and a flag, then read the flag back
+  description: Create a segment and a flag, then read the flag back.
+  steps:
+  - stepId: segment
+    operationId: createFlagSegment
+    description: Create a flag segment -- a core-tier operation (89% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+  - stepId: flag
+    operationId: createFlag
+    description: Create a flag -- a core-tier operation (90% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+  - stepId: read
+    operationId: getFlag
+    description: Get a flag -- a core-tier operation (79% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: flag_id
+      in: path
+      value: $steps.flag.outputs.id
+  x-commons-tiers:
+  - core

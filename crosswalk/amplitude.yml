@@ -1,0 +1,54 @@
+provider: amplitude
+apis_io: https://apis.io/providers/amplitude/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - flags
+    properties:
+      name: name
+      description: description
+      enabled:
+      - enabled
+      - state
+      id: id
+      key: key
+      metadata: metadata
+      variations: variants
+      project_id: projectId
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/amplitude-experiment-evaluation-api-openapi.yml#GET /v1/flags
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/flags
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/flags/{id}
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#PATCH /api/1/flags/{id}
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#POST /api/1/flags
+  flag_segment:
+    path_segment:
+    - cohorts
+    properties:
+      description: description
+      id: id
+      name: name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/amplitude-behavioral-cohorts-api-openapi.yml#GET /api/3/cohorts
+  experiment:
+    path_segment:
+    - experiments
+    properties:
+      id: id
+      name: name
+      description: description
+      status: state
+      ended_at: endDate
+      started_at: startDate
+      key: key
+      variations: variants
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/experiments
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/experiments/{id}
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#PATCH /api/1/experiments/{id}
+    - openapi/_original/amplitude-experiment-management-api-openapi.yml#POST /api/1/experiments

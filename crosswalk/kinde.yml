@@ -1,0 +1,31 @@
+provider: kinde
+apis_io: https://apis.io/providers/kinde/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - feature_flags
+    properties:
+      name: name
+      description: description
+      id: id
+      key:
+      - key
+      - code
+      type: type
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/kinde-frontend-api-openapi.yml#GET /account_api/v1/feature_flags
+    - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/environment/feature_flags
+    - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/environment/feature_flags/{feature_flag_key}
+    - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/feature_flags/{feature_flag_key}
+    - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/organizations/{org_code}/feature_flags
+  flag_environment:
+    path_segment:
+    - environment
+    properties:
+      key: code
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/kinde-management-api-openapi.yml#GET /api/v1/environment

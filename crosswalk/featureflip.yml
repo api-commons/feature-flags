@@ -1,0 +1,60 @@
+provider: featureflip
+apis_io: https://apis.io/providers/featureflip/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - flags
+    properties:
+      name: name
+      description: description
+      enabled: enabled
+      id: id
+      key: key
+      metadata: tags
+      created_at: createdAt
+      type: type
+      variations: variations
+      updated_at: updatedAt
+      rules: rules
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/evaluation-v1.json#GET /v1/sdk/flags
+    - openapi/_original/evaluation-v1.json#GET /v1/sdk/flags/{key}
+    - openapi/_original/featureflip-evaluation-api.json#GET /v1/sdk/flags
+    - openapi/_original/featureflip-evaluation-api.json#GET /v1/sdk/flags/{key}
+    - openapi/_original/featureflip-openapi.json#DELETE /api/v1/orgs/{org}/projects/{project}/flags/{flag}
+  flag_environment:
+    path_segment:
+    - environments
+    properties:
+      name: name
+      id: id
+      key: key
+      color: color
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/featureflip-openapi.json#DELETE /api/v1/orgs/{org}/projects/{project}/environments/{env}
+    - openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/environments
+    - openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/environments/{env}
+    - openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/flags/{flag}/environments
+    - openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/flags/{flag}/environments/{env}
+  flag_segment:
+    path_segment:
+    - segments
+    properties:
+      description: description
+      id: id
+      name: name
+      created_at: createdAt
+      rules: conditions
+      updated_at: updatedAt
+      operator: operator
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/featureflip-openapi.json#DELETE /api/v1/orgs/{org}/projects/{project}/segments/{segment}
+    - openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/segments
+    - openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/segments/{segment}
+    - openapi/_original/featureflip-openapi.json#POST /api/v1/orgs/{org}/projects/{project}/segments
+    - openapi/_original/featureflip-openapi.json#PUT /api/v1/orgs/{org}/projects/{project}/segments/{segment}

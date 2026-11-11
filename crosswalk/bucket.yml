@@ -1,0 +1,33 @@
+provider: bucket
+apis_io: https://apis.io/providers/bucket/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - flags
+    properties:
+      name: name
+      description: description
+      enabled: archived
+      id: id
+      key: key
+      created_at: createdAt
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/bucket-openapi.json#GET /apps/{appId}/envs/{envId}/companies/{companyId}/flags
+    - openapi/_original/bucket-openapi.json#GET /apps/{appId}/envs/{envId}/users/{userId}/flags
+    - openapi/_original/bucket-openapi.json#GET /apps/{appId}/flags
+    - openapi/_original/bucket-openapi.json#PATCH /apps/{appId}/envs/{envId}/companies/{companyId}/flags
+    - openapi/_original/bucket-openapi.json#PATCH /apps/{appId}/envs/{envId}/users/{userId}/flags
+  flag_environment:
+    path_segment:
+    - environments
+    properties:
+      name: name
+      id: id
+      is_production: isProduction
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bucket-openapi.json#GET /apps/{appId}/environments
+    - openapi/_original/bucket-openapi.json#GET /apps/{appId}/environments/{envId}

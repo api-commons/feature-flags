@@ -1,0 +1,125 @@
+context: feature-flags
+generated: '2026-11-11'
+adopters:
+- provider: ab-tasty
+  apis_io: https://apis.io/providers/ab-tasty/
+  crosswalk: crosswalk/ab-tasty.yml
+  concepts:
+  - flag
+- provider: amplitude
+  apis_io: https://apis.io/providers/amplitude/
+  crosswalk: crosswalk/amplitude.yml
+  concepts:
+  - experiment
+  - flag
+  - flag_segment
+- provider: apptimize
+  apis_io: https://apis.io/providers/apptimize/
+  crosswalk: crosswalk/apptimize.yml
+  concepts:
+  - flag
+- provider: bucket
+  apis_io: https://apis.io/providers/bucket/
+  crosswalk: crosswalk/bucket.yml
+  concepts:
+  - flag
+  - flag_environment
+- provider: cloudbees
+  apis_io: https://apis.io/providers/cloudbees/
+  crosswalk: crosswalk/cloudbees.yml
+  concepts:
+  - flag
+  - flag_environment
+- provider: convert
+  apis_io: https://apis.io/providers/convert/
+  crosswalk: crosswalk/convert.yml
+  concepts:
+  - flag
+  - flag_segment
+- provider: devcycle
+  apis_io: https://apis.io/providers/devcycle/
+  crosswalk: crosswalk/devcycle.yml
+  concepts:
+  - flag
+  - flag_environment
+  - flag_segment
+- provider: eppo
+  apis_io: https://apis.io/providers/eppo/
+  crosswalk: crosswalk/eppo.yml
+  concepts:
+  - experiment
+  - flag
+- provider: featureflip
+  apis_io: https://apis.io/providers/featureflip/
+  crosswalk: crosswalk/featureflip.yml
+  concepts:
+  - flag
+  - flag_environment
+  - flag_segment
+- provider: flagsmith
+  apis_io: https://apis.io/providers/flagsmith/
+  crosswalk: crosswalk/flagsmith.yml
+  concepts:
+  - experiment
+  - flag
+  - flag_environment
+  - flag_segment
+- provider: kinde
+  apis_io: https://apis.io/providers/kinde/
+  crosswalk: crosswalk/kinde.yml
+  concepts:
+  - flag
+  - flag_environment
+- provider: launchdarkly
+  apis_io: https://apis.io/providers/launchdarkly/
+  crosswalk: crosswalk/launchdarkly.yml
+  concepts:
+  - experiment
+  - flag
+  - flag_environment
+- provider: openfeature
+  apis_io: https://apis.io/providers/openfeature/
+  crosswalk: crosswalk/openfeature.yml
+  concepts:
+  - flag
+- provider: optimizely
+  apis_io: https://apis.io/providers/optimizely/
+  crosswalk: crosswalk/optimizely.yml
+  concepts:
+  - experiment
+  - flag
+  - flag_environment
+  - flag_segment
+- provider: posthog
+  apis_io: https://apis.io/providers/posthog/
+  crosswalk: crosswalk/posthog.yml
+  concepts:
+  - experiment
+  - flag
+  - flag_environment
+  - flag_segment
+- provider: schematic
+  apis_io: https://apis.io/providers/schematic/
+  crosswalk: crosswalk/schematic.yml
+  concepts:
+  - flag
+  - flag_environment
+- provider: statsig
+  apis_io: https://apis.io/providers/statsig/
+  crosswalk: crosswalk/statsig.yml
+  concepts:
+  - experiment
+  - flag
+  - flag_segment
+- provider: unleash
+  apis_io: https://apis.io/providers/unleash/
+  crosswalk: crosswalk/unleash.yml
+  concepts:
+  - flag
+  - flag_environment
+  - flag_segment
+- provider: vwo
+  apis_io: https://apis.io/providers/vwo/
+  crosswalk: crosswalk/vwo.yml
+  concepts:
+  - flag

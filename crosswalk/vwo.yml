@@ -1,0 +1,18 @@
+provider: vwo
+apis_io: https://apis.io/providers/vwo/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - feature-flags
+    properties:
+      key: key
+      type: type
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/vwo-openapi.yml#DELETE /accounts/{account_id}/fme/feature-flags/{feature_flag_id}
+    - openapi/_original/vwo-openapi.yml#GET /accounts/{account_id}/fme/feature-flags
+    - openapi/_original/vwo-openapi.yml#GET /accounts/{account_id}/fme/feature-flags/{feature_flag_id}
+    - openapi/_original/vwo-openapi.yml#PATCH /accounts/{account_id}/fme/feature-flags/{feature_flag_id}
+    - openapi/_original/vwo-openapi.yml#POST /accounts/{account_id}/fme/feature-flags

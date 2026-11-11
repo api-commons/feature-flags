@@ -1,0 +1,58 @@
+provider: statsig
+apis_io: https://apis.io/providers/statsig/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - gates
+    properties:
+      name: name
+      description: description
+      enabled:
+      - isEnabled
+      - status
+      id: id
+      metadata: tags
+      type: type
+      rules: rules
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/statsig-console-api-openapi.yml#DELETE /gates/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#GET /gates
+    - openapi/_original/statsig-console-api-openapi.yml#GET /gates/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#PATCH /gates/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#POST /gates
+  flag_segment:
+    path_segment:
+    - segments
+    properties:
+      description: description
+      id: id
+      name: name
+      rules: rules
+      metadata: tags
+      operator: operator
+      type: type
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/statsig-console-api-openapi.yml#DELETE /segments/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#GET /segments
+    - openapi/_original/statsig-console-api-openapi.yml#GET /segments/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#PATCH /segments/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#POST /segments
+  experiment:
+    path_segment:
+    - experiments
+    properties:
+      id: id
+      name: name
+      description: description
+      status: status
+    core_coverage: 0.571
+    evidence:
+    - openapi/_original/statsig-console-api-openapi.yml#DELETE /experiments/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#GET /experiments
+    - openapi/_original/statsig-console-api-openapi.yml#GET /experiments/{id}
+    - openapi/_original/statsig-console-api-openapi.yml#GET /layers/{id}/experiments
+    - openapi/_original/statsig-console-api-openapi.yml#PATCH /experiments/{id}

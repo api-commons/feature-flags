@@ -1,0 +1,698 @@
+context: feature-flags
+name: Feature Flags
+generated: '2026-11-11'
+version: 0.1.0-draft.20261111
+status: draft
+cohort:
+  tags:
+  - Feature Flags
+  - Feature Management
+  - Experimentation
+  - A/B Testing
+  - Feature Toggles
+  - Progressive Delivery
+  providers_with_harvested_openapi: 36
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded: {}
+duplicates: {}
+shared_specs: {}
+concepts:
+  flag:
+    segments_seen:
+      flags: 12
+      features: 4
+      feature-flags: 2
+      feature_flags: 2
+      gates: 1
+    providers_exposing: 19
+    providers_with_readable_schema: 19
+    operations:
+    - operation: POST collection
+      providers: 17
+      share: 0.895
+      tier: core
+    - operation: GET collection
+      providers: 15
+      share: 0.789
+      tier: core
+    - operation: GET item
+      providers: 15
+      share: 0.789
+      tier: core
+    - operation: UPDATE item
+      providers: 15
+      share: 0.789
+      tier: core
+    - operation: DELETE item
+      providers: 12
+      share: 0.632
+      tier: core
+    - operation: POST item
+      providers: 3
+      share: 0.158
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.105
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.053
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 15
+      share: 0.789
+      type: string
+      spellings:
+      - name
+      - title
+    - name: description
+      tier: core
+      providers: 14
+      share: 0.737
+      type: string
+      spellings:
+      - description
+    - name: enabled
+      tier: core
+      providers: 13
+      share: 0.684
+      type: boolean
+      spellings:
+      - enabled
+      - archived
+      - status
+      - state
+      - active
+      - isEnabled
+    - name: id
+      tier: core
+      providers: 13
+      share: 0.684
+      type: string
+      spellings:
+      - id
+      - _id
+      - uuid
+    - name: key
+      tier: core
+      providers: 13
+      share: 0.684
+      type: string
+      spellings:
+      - key
+      - code
+      - _key
+    - name: metadata
+      tier: core
+      providers: 12
+      share: 0.632
+      type: object
+      spellings:
+      - tags
+      - metadata
+      - labels
+      - _metadata
+      - _maintainer
+      - custom_fields
+      - maintainer
+    - name: created_at
+      tier: core
+      providers: 10
+      share: 0.526
+      type: string
+      spellings:
+      - createdAt
+      - created
+      - created_at
+      - created_date
+      - _createdAt
+      - creationDate
+    - name: type
+      tier: core
+      providers: 10
+      share: 0.526
+      type: string
+      spellings:
+      - type
+      - flagType
+      - kind
+      - flag_type
+    - name: variations
+      tier: extended
+      providers: 8
+      share: 0.421
+      type: array
+      spellings:
+      - variations
+      - variants
+    - name: updated_at
+      tier: extended
+      providers: 6
+      share: 0.316
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - updated
+      - last_modified
+    - name: project_id
+      tier: extended
+      providers: 5
+      share: 0.263
+      type: string
+      spellings:
+      - project
+      - projectId
+      - _project
+      - project_id
+    - name: reason
+      tier: extended
+      providers: 4
+      share: 0.211
+      type: string
+      spellings:
+      - reason
+    - name: rules
+      tier: extended
+      providers: 4
+      share: 0.211
+      type: array
+      spellings:
+      - rules
+      - strategies
+    long_tail_count: 198
+    long_tail_sample:
+    - context
+    - created_by
+    - default_value
+    - environments
+    - is_archived
+    - stale
+    - variables
+    - variant
+    - version
+    - created_time
+    - deleted
+    - feature
+    - from
+    - is_permanent
+    - op
+    - owner
+    - owner_user_id
+    - path
+    - segments
+    - account_id
+    - actions
+    - allow_override_level
+    - analytics_dashboards
+    - anonymous_id
+    - archive_url
+    - archived_at
+    - archived_date
+    - bucketing_identifier
+    - bucketing_key
+    - bucketing_salt
+    - can_edit
+    - casc_url
+    - change_description
+    - change_requests
+    - children
+    - client_side_availability
+    - client_side_visible
+    - code_references_counts
+    - code_refs_cleaned_up
+    - code_refs_marked_clean_at
+  flag_environment:
+    segments_seen:
+      environments: 10
+      environment: 2
+    providers_exposing: 11
+    providers_with_readable_schema: 11
+    operations:
+    - operation: GET collection
+      providers: 11
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 10
+      share: 0.909
+      tier: core
+    - operation: DELETE item
+      providers: 8
+      share: 0.727
+      tier: core
+    - operation: POST collection
+      providers: 8
+      share: 0.727
+      tier: core
+    - operation: UPDATE item
+      providers: 8
+      share: 0.727
+      tier: core
+    properties:
+    - name: name
+      tier: core
+      providers: 10
+      share: 0.909
+      type: string
+      spellings:
+      - name
+    - name: id
+      tier: core
+      providers: 9
+      share: 0.818
+      type: string
+      spellings:
+      - id
+      - _id
+      - uuid
+    - name: created_at
+      tier: extended
+      providers: 5
+      share: 0.455
+      type: string
+      spellings:
+      - created
+      - created_at
+      - createdAt
+    - name: key
+      tier: extended
+      providers: 5
+      share: 0.455
+      type: string
+      spellings:
+      - key
+      - code
+    - name: updated_at
+      tier: extended
+      providers: 5
+      share: 0.455
+      type: string
+      spellings:
+      - updated_at
+      - updated
+      - updatedAt
+      - last_modified
+    - name: description
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: string
+      spellings:
+      - description
+    - name: color
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - color
+    - name: is_production
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: boolean
+      spellings:
+      - isProduction
+      - critical
+      - protected
+    long_tail_count: 187
+    long_tail_sample:
+    - api_key
+    - enabled
+    - environment_id
+    - metadata
+    - project
+    - project_id
+    - readonly
+    - sort_order
+    - type
+    - access
+    - access_control
+    - actions
+    - allow_client_traits
+    - anonymize_ips
+    - api_token
+    - api_token_count
+    - app_urls
+    - approval_settings
+    - archived
+    - autocapture_exceptions_errors_to_ignore
+    - autocapture_exceptions_opt_in
+    - autocapture_opt_out
+    - autocapture_web_vitals_allowed_metrics
+    - autocapture_web_vitals_opt_in
+    - available_setup_task_ids
+    - banner_colour
+    - banner_text
+    - base_currency
+    - business_model
+    - capture_console_log_opt_in
+    - capture_dead_clicks
+    - capture_performance_opt_in
+    - casc_url
+    - change_request_ids
+    - change_requests_enabled
+    - client_ip
+    - completed_snippet_onboarding
+    - conditions
+    - confirm_changes
+    - conversations_enabled
+  flag_segment:
+    segments_seen:
+      segments: 5
+      cohorts: 3
+      audiences: 3
+      segment: 1
+    providers_exposing: 9
+    providers_with_readable_schema: 9
+    operations:
+    - operation: GET collection
+      providers: 8
+      share: 0.889
+      tier: core
+    - operation: GET item
+      providers: 8
+      share: 0.889
+      tier: core
+    - operation: POST collection
+      providers: 8
+      share: 0.889
+      tier: core
+    - operation: DELETE item
+      providers: 7
+      share: 0.778
+      tier: core
+    - operation: UPDATE item
+      providers: 7
+      share: 0.778
+      tier: core
+    - operation: POST item
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    properties:
+    - name: description
+      tier: core
+      providers: 9
+      share: 1.0
+      type: string
+      spellings:
+      - description
+    - name: id
+      tier: core
+      providers: 9
+      share: 1.0
+      type: string
+      spellings:
+      - id
+      - _id
+      - uuid
+    - name: name
+      tier: core
+      providers: 9
+      share: 1.0
+      type: string
+      spellings:
+      - name
+    - name: created_at
+      tier: core
+      providers: 6
+      share: 0.667
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created
+    - name: rules
+      tier: core
+      providers: 6
+      share: 0.667
+      type: array
+      spellings:
+      - rules
+      - conditions
+      - constraints
+    - name: metadata
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: array
+      spellings:
+      - tags
+      - metadata
+    - name: updated_at
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - last_modified
+    - name: created_by
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - _createdBy
+      - created_by
+      - createdBy
+    - name: operator
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - operator
+    - name: project
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - project
+      - _project
+    - name: type
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - type
+    long_tail_count: 71
+    long_tail_sample:
+    - archived
+    - filters
+    - key
+    - values
+    - version
+    - actions
+    - api_key
+    - app_id
+    - attribute
+    - base_url
+    - case_insensitive
+    - cohort
+    - cohort_type
+    - context_name
+    - create_in_folder
+    - create_static_person_ids
+    - created_time
+    - customer_count
+    - definition
+    - deleted
+    - errors_calculating
+    - except
+    - experiences
+    - experiment_count
+    - experiment_set
+    - feature
+    - for_journey
+    - groups
+    - has_overrides
+    - has_usage
+    - include
+    - instructions
+    - inverted
+    - is_calculating
+    - is_classic
+    - is_default
+    - is_static
+    - last_backfill_person_properties_at
+    - last_calculation
+    - last_computed
+  experiment:
+    segments_seen:
+      experiments: 7
+    providers_exposing: 7
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.857
+      tier: core
+    - operation: DELETE item
+      providers: 4
+      share: 0.571
+      tier: core
+    properties:
+    - name: id
+      tier: core
+      providers: 7
+      share: 1.0
+      type: string
+      spellings:
+      - id
+      - _id
+      - experiment_id
+    - name: name
+      tier: core
+      providers: 7
+      share: 1.0
+      type: string
+      spellings:
+      - name
+    - name: description
+      tier: core
+      providers: 6
+      share: 0.857
+      type: string
+      spellings:
+      - description
+    - name: status
+      tier: core
+      providers: 6
+      share: 0.857
+      type: string
+      spellings:
+      - status
+      - state
+    - name: created_at
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - created_at
+      - _creationDate
+      - createdOn
+      - created
+    - name: ended_at
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - endDate
+      - ended_at
+      - end_date
+    - name: started_at
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - startDate
+      - started_at
+      - start_date
+    - name: key
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - key
+      - feature_key
+    - name: metrics
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: array
+      spellings:
+      - metrics
+      - metric
+    - name: type
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - type
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - updated_at
+      - last_modified
+    - name: variations
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: array
+      spellings:
+      - variations
+      - variants
+    long_tail_count: 107
+    long_tail_sample:
+    - created_by
+    - holdout_id
+    - hypothesis
+    - metadata
+    - project_id
+    - access
+    - allocation
+    - allocation_policy
+    - allow_unknown_events
+    - analysis_config
+    - archived
+    - archived_date
+    - audience_conditions
+    - bucketing_key
+    - bucketing_salt
+    - campaign_id
+    - changes
+    - comment
+    - completed_on
+    - conclusion
+    - conclusion_comment
+    - create_in_folder
+    - created_time
+    - current_iteration
+    - custom_field_values
+    - data_source
+    - deleted
+    - deployed_variation_id
+    - deployments
+    - draft_iteration
+    - earliest
+    - enabled
+    - end_condition
+    - end_on
+    - environment_key
+    - environments
+    - evaluation_mode
+    - experiment_end_time
+    - experiment_rollout
+    - experiment_start_time

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/feature-flags/main/schema/flag_segment.json",
+  "title": "Flag Segment",
+  "description": "The common flag_segment in Feature Flags, distilled from 9 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 1.0,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 1.0,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "id",
+        "_id",
+        "uuid"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 1.0,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "name"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "rules": {
+      "type": "array",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "rules",
+        "conditions",
+        "constraints"
+      ]
+    },
+    "metadata": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "tags",
+        "metadata"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at",
+        "last_modified"
+      ],
+      "format": "date-time"
+    },
+    "created_by": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "_createdBy",
+        "created_by",
+        "createdBy"
+      ]
+    },
+    "operator": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "operator"
+      ]
+    },
+    "project": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "project",
+        "_project"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "type"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "feature-flags",
+    "concept": "flag_segment",
+    "providers": 9,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

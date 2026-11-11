@@ -1,0 +1,305 @@
+[
+ {
+  "slug": "ab-tasty",
+  "specs": [
+   "openapi/_original/decision-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "akuity",
+  "specs": [
+   "openapi/_original/akuity-apikey.json",
+   "openapi/_original/akuity-argocd.json",
+   "openapi/_original/akuity-auth.json",
+   "openapi/_original/akuity-customrole.json",
+   "openapi/_original/akuity-extension.json",
+   "openapi/_original/akuity-kargo.json",
+   "openapi/_original/akuity-organization.json",
+   "openapi/_original/akuity-system.json"
+  ]
+ },
+ {
+  "slug": "amplitude",
+  "specs": [
+   "openapi/_original/amplitude-behavioral-cohorts-api-openapi.yml",
+   "openapi/_original/amplitude-chart-annotations-api-openapi.yml",
+   "openapi/_original/amplitude-dashboard-rest-api-openapi.yml",
+   "openapi/_original/amplitude-dsar-api-openapi.yml",
+   "openapi/_original/amplitude-experiment-evaluation-api-openapi.yml",
+   "openapi/_original/amplitude-experiment-management-api-openapi.yml",
+   "openapi/_original/amplitude-http-v2-api-openapi.yml",
+   "openapi/_original/amplitude-scim-api-openapi.yml",
+   "openapi/_original/amplitude-taxonomy-api-openapi.yml",
+   "openapi/_original/amplitude-user-profile-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "apptimize",
+  "specs": [
+   "openapi/_original/apptimize-rest-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "argo",
+  "specs": [
+   "openapi/_original/argo-cd-openapi.yml",
+   "openapi/_original/argo-workflows-openapi.yml",
+   "openapi/_original/openapi.yml"
+  ]
+ },
+ {
+  "slug": "bucket",
+  "specs": [
+   "openapi/_original/bucket-openapi.json"
+  ]
+ },
+ {
+  "slug": "cloudbees",
+  "specs": [
+   "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml",
+   "openapi/_original/cloudbees-openapi.yml"
+  ]
+ },
+ {
+  "slug": "convert",
+  "specs": [
+   "openapi/_original/convert-openapi.yml"
+  ]
+ },
+ {
+  "slug": "devcycle",
+  "specs": [
+   "openapi/_original/devcycle-bucketing-openapi.yaml",
+   "openapi/_original/devcycle-management-openapi.json"
+  ]
+ },
+ {
+  "slug": "dream-sports",
+  "specs": [
+   "openapi/_original/dream-sports-checkmate-openapi.yml",
+   "openapi/_original/dream-sports-delivr-ota-openapi.yml",
+   "openapi/_original/dream-sports-dota-openapi.yml",
+   "openapi/_original/dream-sports-guardian-integrations-openapi.yml",
+   "openapi/_original/dream-sports-guardian-openapi.yml",
+   "openapi/_original/dream-sports-raven-journey-openapi.yml",
+   "openapi/_original/dream-sports-thunder-admin-openapi.yml",
+   "openapi/_original/dream-sports-thunder-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "dynamic-yield",
+  "specs": [
+   "openapi/_original/dynamic-yield-experience-api-readme-slices.json",
+   "openapi/_original/dynamic-yield-experience-apis-for-api-sections-openapi.yml",
+   "openapi/_original/dynamic-yield-experience-apis-for-api-sections-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "eppo",
+  "specs": [
+   "openapi/_original/eppo-openapi.yml"
+  ]
+ },
+ {
+  "slug": "featureflip",
+  "specs": [
+   "openapi/_original/evaluation-v1.json",
+   "openapi/_original/featureflip-evaluation-api.json",
+   "openapi/_original/featureflip-openapi.json"
+  ]
+ },
+ {
+  "slug": "flagsmith",
+  "specs": [
+   "openapi/_original/flagsmith-admin-api-openapi.yml",
+   "openapi/_original/flagsmith-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "freeplay",
+  "specs": [
+   "openapi/_original/freeplay-openapi.json"
+  ]
+ },
+ {
+  "slug": "growthbook",
+  "specs": [
+   "openapi/_original/growthbook-openapi.yml"
+  ]
+ },
+ {
+  "slug": "hypertune",
+  "specs": [
+   "openapi/_original/hypertune-openapi.yml"
+  ]
+ },
+ {
+  "slug": "kameleoon",
+  "specs": [
+   "openapi/_original/kameleoon-openapi.yml"
+  ]
+ },
+ {
+  "slug": "kinde",
+  "specs": [
+   "openapi/_original/kinde-frontend-api-openapi.yml",
+   "openapi/_original/kinde-management-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "launchdarkly",
+  "specs": [
+   "openapi/_original/launchdarkly-dev-server-openapi.yml",
+   "openapi/_original/launchdarkly-openapi.json",
+   "openapi/_original/launchdarkly-relay-proxy-openapi.yml",
+   "openapi/_original/launchdarkly-rest-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "leanplum",
+  "specs": [
+   "openapi/_original/leanplum-api-openapi.json",
+   "openapi/_original/leanplum-openapi.yml"
+  ]
+ },
+ {
+  "slug": "monetate",
+  "specs": [
+   "openapi/_original/monetate-auth-api-openapi-original.yml",
+   "openapi/_original/monetate-auth-api-openapi.yml",
+   "openapi/_original/monetate-data-api-openapi-original.yml",
+   "openapi/_original/monetate-engine-api-openapi-original.yml",
+   "openapi/_original/monetate-engine-api-openapi.yml",
+   "openapi/_original/monetate-metadata-api-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "ninetailed",
+  "specs": [
+   "openapi/_original/ninetailed-experience-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "openfeature",
+  "specs": [
+   "openapi/_original/openfeature-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "optimizely",
+  "specs": [
+   "openapi/_original/optimizely-campaign-openapi.yml",
+   "openapi/_original/optimizely-campaign-optimizely-campaign-rest-api-openapi.json",
+   "openapi/_original/optimizely-cmp-openapi.yml",
+   "openapi/_original/optimizely-commerce-service-openapi.yml",
+   "openapi/_original/optimizely-configured-commerce-admin-api-v1-openapi.json",
+   "openapi/_original/optimizely-configured-commerce-storefront-api-v1-openapi.json",
+   "openapi/_original/optimizely-configured-commerce-storefront-api-v2-openapi.json",
+   "openapi/_original/optimizely-content-delivery-openapi.yml",
+   "openapi/_original/optimizely-content-management-openapi.yml",
+   "openapi/_original/optimizely-content-management-system-episervercontentapidocs-openapi.json",
+   "openapi/_original/optimizely-content-marketing-platform-optimizely-cmp-open-api-documentation-openapi.json",
+   "openapi/_original/optimizely-data-platform-advanced-openapi.json",
+   "openapi/_original/optimizely-data-platform-consent-openapi.json",
+   "openapi/_original/optimizely-data-platform-customers-openapi.json",
+   "openapi/_original/optimizely-data-platform-events-openapi.json",
+   "openapi/_original/optimizely-data-platform-exports-openapi.json",
+   "openapi/_original/optimizely-data-platform-lists-openapi.json",
+   "openapi/_original/optimizely-data-platform-objects-openapi.json",
+   "openapi/_original/optimizely-data-platform-openapi.yml",
+   "openapi/_original/optimizely-data-platform-orders-openapi.json",
+   "openapi/_original/optimizely-data-platform-products-openapi.json",
+   "openapi/_original/optimizely-data-platform-realtimesegments-openapi.json",
+   "openapi/_original/optimizely-data-platform-recommendations-openapi.json",
+   "openapi/_original/optimizely-digital-experience-platform-episerver-cloud-api-1-openapi.json",
+   "openapi/_original/optimizely-experimentation-data-optimizely-event-api-openapi.json",
+   "openapi/_original/optimizely-feature-experimentation-openapi.yml",
+   "openapi/_original/optimizely-feature-experimentation-optimizely-agent-api-openapi.json",
+   "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json",
+   "openapi/_original/optimizely-feature-experimentation-optimizely-flags-scheduling-api-openapi.json",
+   "openapi/_original/optimizely-feature-experimentation-permission-service-openapi.json",
+   "openapi/_original/optimizely-graph-openapi.yml",
+   "openapi/_original/optimizely-performance-edge-optimizely-edge-decider-openapi.json",
+   "openapi/_original/optimizely-platform-optimizely-optimizely-graph-api-openapi.json",
+   "openapi/_original/optimizely-platform-optimizely-swagger-openapi.json",
+   "openapi/_original/optimizely-recommendations-public-api-spec-openapi.yaml",
+   "openapi/_original/optimizely-web-experimentation-openapi.yml",
+   "openapi/_original/optimizely-web-experimentation-optimizely-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "parea",
+  "specs": [
+   "openapi/_original/parea-rest-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "posthog",
+  "specs": [
+   "openapi/_original/posthog-openapi.yml"
+  ]
+ },
+ {
+  "slug": "schematic",
+  "specs": [
+   "openapi/_original/schematic-openapi-v1.0.0.json",
+   "openapi/_original/schematic-openapi.yml"
+  ]
+ },
+ {
+  "slug": "seldon",
+  "specs": [
+   "openapi/_original/seldon-enterprise-platform-api-openapi.yml",
+   "openapi/_original/seldon-inference-api-v2-openapi.yml",
+   "openapi/_original/seldon-wrapper-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "split",
+  "specs": [
+   "openapi/_original/split-evaluator-api-openapi.yml",
+   "openapi/_original/split-feature-flag-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "statsig",
+  "specs": [
+   "openapi/_original/statsig-client-sdk-api-openapi.yml",
+   "openapi/_original/statsig-console-api-openapi.yml",
+   "openapi/_original/statsig-http-api-openapi.yml",
+   "openapi/_original/statsig-server-sdk-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "stigg",
+  "specs": [
+   "openapi/_original/stigg-openapi.yml",
+   "openapi/_original/stigg-rest-openapi.yml"
+  ]
+ },
+ {
+  "slug": "unbounce",
+  "specs": [
+   "openapi/_original/unbounce-openapi.yml"
+  ]
+ },
+ {
+  "slug": "uniform",
+  "specs": [
+   "openapi/_original/uniform-platform-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "unleash",
+  "specs": [
+   "openapi/_original/unleash-admin-api-openapi.yml",
+   "openapi/_original/unleash-frontend-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "vwo",
+  "specs": [
+   "openapi/_original/vwo-openapi.yml"
+  ]
+ }
+]

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/feature-flags/main/schema/flag_environment.json",
+  "title": "Flag Environment",
+  "description": "The common flag_environment in Feature Flags, distilled from 11 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.909,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "name"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.818,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "id",
+        "_id",
+        "uuid"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.455,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "created",
+        "created_at",
+        "createdAt"
+      ],
+      "format": "date-time"
+    },
+    "key": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.455,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "key",
+        "code"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.455,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "updated_at",
+        "updated",
+        "updatedAt",
+        "last_modified"
+      ],
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.364,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "color": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "color"
+      ]
+    },
+    "is_production": {
+      "type": "boolean",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "isProduction",
+        "critical",
+        "protected"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "feature-flags",
+    "concept": "flag_environment",
+    "providers": 11,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

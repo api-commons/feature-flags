@@ -1,0 +1,410 @@
+openapi: 3.1.0
+info:
+  title: Feature Flags (API Commons)
+  version: 0.1.0-draft.20261111
+  description: 'The common Feature Flags interface, distilled from the harvested OpenAPI of 36 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /flags:
+    post:
+      operationId: createFlag
+      summary: Create a flag
+      tags:
+      - Flags
+      x-commons-tier: core
+      x-commons-share: 0.895
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id001
+                $ref: '#/components/schemas/Flag'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    get:
+      operationId: listFlags
+      summary: List flags
+      tags:
+      - Flags
+      x-commons-tier: core
+      x-commons-share: 0.789
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id001
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /flags/{flag_id}:
+    parameters:
+    - $ref: '#/components/parameters/flag_id'
+    get:
+      operationId: getFlag
+      summary: Get a flag
+      tags:
+      - Flags
+      x-commons-tier: core
+      x-commons-share: 0.789
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateFlag
+      summary: Update a flag
+      tags:
+      - Flags
+      x-commons-tier: core
+      x-commons-share: 0.789
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    delete:
+      operationId: deleteFlag
+      summary: Delete a flag
+      tags:
+      - Flags
+      x-commons-tier: core
+      x-commons-share: 0.632
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /flag-environments:
+    get:
+      operationId: listFlagEnvironments
+      summary: List flag environments
+      tags:
+      - Flag Environments
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/FlagEnvironment'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createFlagEnvironment
+      summary: Create a flag environment
+      tags:
+      - Flag Environments
+      x-commons-tier: core
+      x-commons-share: 0.727
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /flag-environments/{flag_environment_id}:
+    parameters:
+    - $ref: '#/components/parameters/flag_environment_id'
+    get:
+      operationId: getFlagEnvironment
+      summary: Get a flag environment
+      tags:
+      - Flag Environments
+      x-commons-tier: core
+      x-commons-share: 0.909
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteFlagEnvironment
+      summary: Delete a flag environment
+      tags:
+      - Flag Environments
+      x-commons-tier: core
+      x-commons-share: 0.727
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateFlagEnvironment
+      summary: Update a flag environment
+      tags:
+      - Flag Environments
+      x-commons-tier: core
+      x-commons-share: 0.727
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /flag-segments:
+    get:
+      operationId: listFlagSegments
+      summary: List flag segments
+      tags:
+      - Flag Segments
+      x-commons-tier: core
+      x-commons-share: 0.889
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/FlagSegment'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createFlagSegment
+      summary: Create a flag segment
+      tags:
+      - Flag Segments
+      x-commons-tier: core
+      x-commons-share: 0.889
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /flag-segments/{flag_segment_id}:
+    parameters:
+    - $ref: '#/components/parameters/flag_segment_id'
+    get:
+      operationId: getFlagSegment
+      summary: Get a flag segment
+      tags:
+      - Flag Segments
+      x-commons-tier: core
+      x-commons-share: 0.889
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    delete:
+      operationId: deleteFlagSegment
+      summary: Delete a flag segment
+      tags:
+      - Flag Segments
+      x-commons-tier: core
+      x-commons-share: 0.778
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateFlagSegment
+      summary: Update a flag segment
+      tags:
+      - Flag Segments
+      x-commons-tier: core
+      x-commons-share: 0.778
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /experiments:
+    get:
+      operationId: listExperiments
+      summary: List experiments
+      tags:
+      - Experiments
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Experiment'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createExperiment
+      summary: Create an experiment
+      tags:
+      - Experiments
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /experiments/{experiment_id}:
+    parameters:
+    - $ref: '#/components/parameters/experiment_id'
+    get:
+      operationId: getExperiment
+      summary: Get an experiment
+      tags:
+      - Experiments
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateExperiment
+      summary: Update an experiment
+      tags:
+      - Experiments
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    delete:
+      operationId: deleteExperiment
+      summary: Delete an experiment
+      tags:
+      - Experiments
+      x-commons-tier: core
+      x-commons-share: 0.571
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+components:
+  schemas:
+    Flag:
+      $ref: ./schema/flag.json
+    FlagEnvironment:
+      $ref: ./schema/flag_environment.json
+    FlagSegment:
+      $ref: ./schema/flag_segment.json
+    Experiment:
+      $ref: ./schema/experiment.json
+  parameters:
+    flag_id:
+      name: flag_id
+      in: path
+      required: true
+      schema:
+        type: string
+    flag_environment_id:
+      name: flag_environment_id
+      in: path
+      required: true
+      schema:
+        type: string
+    flag_segment_id:
+      name: flag_segment_id
+      in: path
+      required: true
+      schema:
+        type: string
+    experiment_id:
+      name: experiment_id
+      in: path
+      required: true
+      schema:
+        type: string

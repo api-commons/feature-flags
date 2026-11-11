@@ -1,0 +1,60 @@
+provider: unleash
+apis_io: https://apis.io/providers/unleash/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - features
+    properties:
+      name: name
+      description: description
+      enabled:
+      - archived
+      - enabled
+      metadata: tags
+      created_at: createdAt
+      type: type
+      variations: variants
+      project_id: project
+      rules: strategies
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/projects/{projectId}/features/{featureName}
+    - openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/projects/{projectId}/features
+    - openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/projects/{projectId}/features/{featureName}
+    - openapi/_original/unleash-admin-api-openapi.yml#PATCH /api/admin/projects/{projectId}/features/{featureName}
+    - openapi/_original/unleash-admin-api-openapi.yml#POST /api/admin/projects/{projectId}/features
+  flag_environment:
+    path_segment:
+    - environments
+    - environment
+    properties:
+      name: name
+      is_production: protected
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/environments/{name}
+    - openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/projects/{projectId}/environments/{environment}
+    - openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/environments
+    - openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/environments/{name}
+    - openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/metrics/instances/{appName}/environment/{environment}
+  flag_segment:
+    path_segment:
+    - segments
+    properties:
+      description: description
+      id: id
+      name: name
+      created_at: createdAt
+      rules: constraints
+      created_by: createdBy
+      operator: operator
+      project: project
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/segments/{id}
+    - openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/segments
+    - openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/segments/{id}
+    - openapi/_original/unleash-admin-api-openapi.yml#POST /api/admin/segments
+    - openapi/_original/unleash-admin-api-openapi.yml#PUT /api/admin/segments/{id}

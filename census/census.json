@@ -1,0 +1,2798 @@
+{
+ "cohort_size": 36,
+ "unreadable": [],
+ "concepts": {
+  "flag": {
+   "ab-tasty": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "visitor_id": "string",
+     "anonymous_id": "string",
+     "context": "object",
+     "visitor_consent": "boolean",
+     "trigger_hit": "boolean",
+     "decision_group": "string"
+    },
+    "evidence": [
+     "openapi/_original/decision-api-openapi.yml#POST /{environmentId}/flags"
+    ]
+   },
+   "amplitude": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "key": "string",
+     "metadata": "object",
+     "segments": "array",
+     "variants": "object",
+     "id": "string",
+     "projectId": "string",
+     "name": "string",
+     "description": "string",
+     "enabled": "boolean",
+     "evaluationMode": "string",
+     "bucketingKey": "string",
+     "bucketingSalt": "string",
+     "deployments": "array",
+     "state": "string",
+     "payload": null,
+     "rolloutWeight": "integer"
+    },
+    "evidence": [
+     "openapi/_original/amplitude-experiment-evaluation-api-openapi.yml#GET /v1/flags",
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/flags",
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/flags/{id}",
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#PATCH /api/1/flags/{id}",
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#POST /api/1/flags"
+    ]
+   },
+   "apptimize": {
+    "segments": [
+     "feature-flags"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "variableName": "string",
+     "enabled": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/apptimize-rest-api-openapi.yml#GET /v1/users/{user-id}/feature-flags/{feature-flag-variable-name}"
+    ]
+   },
+   "bucket": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "GET collection",
+     "PATCH collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "key": "string",
+     "name": "string",
+     "description": "string",
+     "stage": "object",
+     "owner": "object",
+     "archived": "boolean",
+     "stale": "boolean",
+     "permanent": "boolean",
+     "createdAt": "string",
+     "rolledOutToEveryoneAt": "string",
+     "codeRefsCleanedUp": "boolean",
+     "codeRefsMarkedCleanUserName": "string",
+     "codeRefsMarkedCleanAt": "string",
+     "lastCheckAt": "string",
+     "noRecentChecks": "boolean",
+     "lastTrackAt": "string",
+     "flag": "object",
+     "flagStateVersions": "object",
+     "stageId": "string",
+     "ownerUserId": null,
+     "secret": "boolean",
+     "isArchived": "boolean",
+     "value": "boolean",
+     "specificTargetValue": null,
+     "firstExposureAt": null,
+     "lastExposureAt": null,
+     "exposureCount": "integer",
+     "firstTrackAt": null,
+     "trackCount": "integer",
+     "updates": "array",
+     "changeDescription": "string",
+     "notifications": "array"
+    },
+    "evidence": [
+     "openapi/_original/bucket-openapi.json#GET /apps/{appId}/envs/{envId}/companies/{companyId}/flags",
+     "openapi/_original/bucket-openapi.json#GET /apps/{appId}/envs/{envId}/users/{userId}/flags",
+     "openapi/_original/bucket-openapi.json#GET /apps/{appId}/flags",
+     "openapi/_original/bucket-openapi.json#PATCH /apps/{appId}/envs/{envId}/companies/{companyId}/flags",
+     "openapi/_original/bucket-openapi.json#PATCH /apps/{appId}/envs/{envId}/users/{userId}/flags",
+     "openapi/_original/bucket-openapi.json#PATCH /apps/{appId}/flags/{flagId}",
+     "openapi/_original/bucket-openapi.json#POST /apps/{appId}/flags"
+    ]
+   },
+   "cloudbees": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "flagType": "string",
+     "variants": "array",
+     "resourceId": "string",
+     "labels": "array",
+     "isPermanent": "boolean",
+     "cascUrl": "string",
+     "created": "string",
+     "configStates": "array",
+     "updated": "string"
+    },
+    "evidence": [
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#DELETE /v2/applications/{applicationId}/flags/{id}",
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#GET /v2/applications/{applicationId}/flags",
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#GET /v2/applications/{applicationId}/flags/{id}",
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#POST /v2/applications/{applicationId}/flags",
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#PUT /v2/applications/{applicationId}/flags/{id}"
+    ]
+   },
+   "convert": {
+    "segments": [
+     "features"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "status": "string",
+     "key": "string",
+     "stats": "object",
+     "description": "string",
+     "variables": "array",
+     "onlyCount": "boolean",
+     "results_per_page": "integer",
+     "sort_direction": "string",
+     "search": "string",
+     "only": "array",
+     "except": "array",
+     "sort_by": "string",
+     "page": "integer",
+     "include": "array"
+    },
+    "evidence": [
+     "openapi/_original/convert-openapi.yml#GET /accounts/{account_id}/projects/{project_id}/features/{feature_id}",
+     "openapi/_original/convert-openapi.yml#GET /accounts/{account_id}/projects/{project_id}/features/{feature_key}",
+     "openapi/_original/convert-openapi.yml#POST /accounts/{account_id}/projects/{project_id}/features"
+    ]
+   },
+   "devcycle": {
+    "segments": [
+     "features",
+     "flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "key": "string",
+     "reason": "string",
+     "variant": "string",
+     "metadata": "object",
+     "value": "boolean",
+     "context": "object",
+     "_id": "string",
+     "_project": "string",
+     "source": "string",
+     "status": "string",
+     "type": "string",
+     "name": "string",
+     "description": "string",
+     "_createdBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "prodTargetingUpdatedAt": "string",
+     "variations": "array",
+     "controlVariation": "string",
+     "staticVariation": "string",
+     "variables": "array",
+     "tags": "array",
+     "ldLink": "string",
+     "readonly": "boolean",
+     "settings": null,
+     "sdkVisibility": null,
+     "configurations": "array",
+     "latestUpdate": null,
+     "changeRequests": "array",
+     "staleness": null,
+     "customStatus": null,
+     "summary": null
+    },
+    "evidence": [
+     "openapi/_original/devcycle-bucketing-openapi.yaml#POST /ofrep/v1/evaluate/flags",
+     "openapi/_original/devcycle-bucketing-openapi.yaml#POST /ofrep/v1/evaluate/flags/{key}",
+     "openapi/_original/devcycle-management-openapi.json#DELETE /v1/projects/{project}/features/{feature}",
+     "openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/features",
+     "openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/features/{feature}",
+     "openapi/_original/devcycle-management-openapi.json#GET /v2/projects/{project}/features",
+     "openapi/_original/devcycle-management-openapi.json#GET /v2/projects/{project}/features/{feature}",
+     "openapi/_original/devcycle-management-openapi.json#PATCH /v1/projects/{project}/features/{feature}",
+     "openapi/_original/devcycle-management-openapi.json#PATCH /v2/projects/{project}/features/{feature}",
+     "openapi/_original/devcycle-management-openapi.json#POST /v1/projects/{project}/features",
+     "openapi/_original/devcycle-management-openapi.json#POST /v2/projects/{project}/features"
+    ]
+   },
+   "eppo": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "key": "string",
+     "name": "string",
+     "description": "string",
+     "enabled": "boolean",
+     "variationType": "string",
+     "variations": "array"
+    },
+    "evidence": [
+     "openapi/_original/eppo-openapi.yml#DELETE /flags/{flagKey}",
+     "openapi/_original/eppo-openapi.yml#GET /flags",
+     "openapi/_original/eppo-openapi.yml#GET /flags/{flagKey}",
+     "openapi/_original/eppo-openapi.yml#PATCH /flags/{flagKey}",
+     "openapi/_original/eppo-openapi.yml#POST /flags"
+    ]
+   },
+   "featureflip": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "environment": "string",
+     "version": "integer",
+     "flags": "array",
+     "segments": "array",
+     "key": "string",
+     "type": "string",
+     "enabled": "boolean",
+     "variations": "array",
+     "rules": "array",
+     "fallthrough": "object",
+     "offVariation": "string",
+     "prerequisites": "array",
+     "id": "string",
+     "name": "string",
+     "isArchived": "boolean",
+     "clientSideVisible": "boolean",
+     "tags": "array",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "expiresAtUtc": "string",
+     "owner": "object",
+     "removalPrUrl": "string",
+     "isPermanent": "boolean",
+     "effectiveExpiresAtUtc": "string",
+     "expirySource": "string",
+     "description": "string",
+     "_actions": "object",
+     "initialVariations": "array",
+     "ownerEmail": "string"
+    },
+    "evidence": [
+     "openapi/_original/evaluation-v1.json#GET /v1/sdk/flags",
+     "openapi/_original/evaluation-v1.json#GET /v1/sdk/flags/{key}",
+     "openapi/_original/featureflip-evaluation-api.json#GET /v1/sdk/flags",
+     "openapi/_original/featureflip-evaluation-api.json#GET /v1/sdk/flags/{key}",
+     "openapi/_original/featureflip-openapi.json#DELETE /api/v1/orgs/{org}/projects/{project}/flags/{flag}",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/flags",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/flags/{flag}",
+     "openapi/_original/featureflip-openapi.json#POST /api/v1/orgs/{org}/projects/{project}/flags",
+     "openapi/_original/featureflip-openapi.json#PUT /api/v1/orgs/{org}/projects/{project}/flags/{flag}"
+    ]
+   },
+   "flagsmith": {
+    "segments": [
+     "features",
+     "flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "results": "array",
+     "id": "integer",
+     "name": "string",
+     "created_date": "string",
+     "description": "string",
+     "initial_value": "string",
+     "default_enabled": "boolean",
+     "type": "string",
+     "project": "integer",
+     "is_archived": "boolean",
+     "owners": "array",
+     "tags": "array",
+     "multivariate_options": "array",
+     "environment_default": "object",
+     "segment_overrides": "array",
+     "feature": "object",
+     "enabled": "boolean",
+     "feature_state_value": null,
+     "variant": "string",
+     "reason": "string",
+     "metadata": "object",
+     "group_owners": "array",
+     "uuid": "string",
+     "environment_feature_state": null,
+     "segment_feature_state": null,
+     "num_segment_overrides": "integer",
+     "num_identity_overrides": [
+      "integer",
+      "null"
+     ],
+     "is_num_identity_overrides_complete": "boolean",
+     "is_server_key_only": "boolean",
+     "last_modified_in_any_environment": [
+      "string",
+      "null"
+     ],
+     "last_modified_in_current_environment": [
+      "string",
+      "null"
+     ],
+     "code_references_counts": "array",
+     "lifecycle_stage": null,
+     "feature_name": "string",
+     "identity_identifier": "string",
+     "enabled_when_evaluated": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/flagsmith-admin-api-openapi.yml#DELETE /projects/{project_id}/features/{feature_id}/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/features/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/features/{feature_id}/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#POST /projects/{project_id}/features/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#PUT /projects/{project_id}/features/{feature_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/projects/{project_pk}/features/{id}/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/__future__/environments/{environment_key}/features/{feature_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/flags/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/flags/{identifier}",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/projects/{project_pk}/features/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/projects/{project_pk}/features/{id}/",
+     "openapi/_original/flagsmith-api-openapi.json#PATCH /api/__future__/environments/{environment_key}/features/{feature_id}/"
+    ]
+   },
+   "kinde": {
+    "segments": [
+     "feature_flags"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "key": "string",
+     "type": "string",
+     "value": null,
+     "code": "string",
+     "message": "string",
+     "feature_flags": "object",
+     "next_token": "string",
+     "description": "string",
+     "allow_override_level": "string",
+     "default_value": "string"
+    },
+    "evidence": [
+     "openapi/_original/kinde-frontend-api-openapi.yml#GET /account_api/v1/feature_flags",
+     "openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/environment/feature_flags",
+     "openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/environment/feature_flags/{feature_flag_key}",
+     "openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/feature_flags/{feature_flag_key}",
+     "openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/organizations/{org_code}/feature_flags",
+     "openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/organizations/{org_code}/feature_flags/{feature_flag_key}",
+     "openapi/_original/kinde-management-api-openapi.yml#GET /api/v1/environment/feature_flags",
+     "openapi/_original/kinde-management-api-openapi.yml#GET /api/v1/organizations/{org_code}/feature_flags",
+     "openapi/_original/kinde-management-api-openapi.yml#PATCH /api/v1/environment/feature_flags/{feature_flag_key}",
+     "openapi/_original/kinde-management-api-openapi.yml#PATCH /api/v1/organizations/{org_code}/feature_flags/{feature_flag_key}",
+     "openapi/_original/kinde-management-api-openapi.yml#PATCH /api/v1/users/{user_id}/feature_flags/{feature_flag_key}",
+     "openapi/_original/kinde-management-api-openapi.yml#POST /api/v1/feature_flags"
+    ]
+   },
+   "launchdarkly": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "_links": "object",
+     "_key": "string",
+     "_integrationKey": "string",
+     "_id": "string",
+     "_deepLink": "string",
+     "_timestamp": "object",
+     "title": "string",
+     "description": "string",
+     "_metadata": "object",
+     "_createdAt": "integer",
+     "_member": "object",
+     "key": "string",
+     "integrationKey": "string",
+     "timestamp": "integer",
+     "deepLink": "string",
+     "metadata": "object",
+     "name": "string",
+     "kind": "string",
+     "_version": "integer",
+     "creationDate": "integer",
+     "includeInSnippet": "boolean",
+     "clientSideAvailability": "object",
+     "variations": "array",
+     "temporary": "boolean",
+     "tags": "array",
+     "maintainerId": "string",
+     "_maintainer": "object",
+     "maintainerTeamKey": "string",
+     "_maintainerTeam": "object",
+     "goalIds": "array",
+     "experiments": "object",
+     "customProperties": "object",
+     "archived": "boolean",
+     "archivedDate": "integer",
+     "deprecated": "boolean",
+     "deprecatedDate": "integer",
+     "defaults": "object",
+     "_purpose": "string",
+     "migrationSettings": "object",
+     "stale": "object",
+     "environments": "object",
+     "purpose": "string",
+     "initialPrerequisites": "array",
+     "isFlagOn": "boolean",
+     "setting": null,
+     "comment": "string",
+     "items": "object",
+     "_value": null,
+     "reason": "object"
+    },
+    "evidence": [
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/flag-links/projects/{projectKey}/flags/{featureFlagKey}",
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/flags/{projectKey}",
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/users/{projectKey}/{environmentKey}/{userKey}/flags",
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey}",
+     "openapi/_original/launchdarkly-openapi.json#POST /api/v2/flag-links/projects/{projectKey}/flags/{featureFlagKey}",
+     "openapi/_original/launchdarkly-openapi.json#POST /api/v2/flags/{projectKey}",
+     "openapi/_original/launchdarkly-openapi.json#PUT /api/v2/projects/{projectKey}/environments/{environmentKey}/contexts/{contextKind}/{contextKey}/flags/{featureFlagKey}",
+     "openapi/_original/launchdarkly-openapi.json#PUT /api/v2/users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey}",
+     "openapi/_original/launchdarkly-relay-proxy-openapi.yml#GET /flags",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#GET /flags/{projectKey}",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#POST /flags/{projectKey}"
+    ]
+   },
+   "openfeature": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "key": "string",
+     "reason": "string",
+     "variant": "string",
+     "metadata": null,
+     "value": "boolean",
+     "context": "object",
+     "flags": "array",
+     "eventStreams": "array"
+    },
+    "evidence": [
+     "openapi/_original/openfeature-openapi.yaml#POST /ofrep/v1/evaluate/flags",
+     "openapi/_original/openfeature-openapi.yaml#POST /ofrep/v1/evaluate/flags/{key}"
+    ]
+   },
+   "optimizely": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "key": "string",
+     "name": "string",
+     "description": "string",
+     "project_id": "integer",
+     "variables": "array",
+     "variations": "array",
+     "environments": "object",
+     "created": "string",
+     "last_modified": "string",
+     "count": "integer",
+     "create_url": null,
+     "fetch_flag_url": null,
+     "filter_url": null,
+     "first_url": null,
+     "items": "array",
+     "last_url": null,
+     "next_url": null,
+     "page": "integer",
+     "prev_url": null,
+     "reset_url": null,
+     "sort_url": null,
+     "total_count": "integer",
+     "total_pages": "integer",
+     "url": null,
+     "account_id": "integer",
+     "archive_url": null,
+     "archived": "boolean",
+     "created_by_user_email": "string",
+     "created_time": "string",
+     "delete_url": null,
+     "id": "integer",
+     "outlier_filtering_enabled": "boolean",
+     "revision": "integer",
+     "role": "string",
+     "unarchive_url": null,
+     "update_url": null,
+     "updated_time": "string",
+     "urn": "string",
+     "variable_definitions": "object",
+     "custom_fields": "object",
+     "owner_user_id": "string",
+     "team_ids": "array",
+     "from": "string",
+     "op": "string",
+     "path": "string",
+     "value": null
+    },
+    "evidence": [
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#DELETE /projects/{project_id}/flags/{flag_key}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /projects/{project_id}/flags",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /projects/{project_id}/flags/{flag_key}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#PATCH /projects/{project_id}/flags/{flag_key}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#POST /projects/{project_id}/flags",
+     "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#DELETE /projects/{project_id}/flags/{flag_key}",
+     "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#GET /projects/{project_id}/flags",
+     "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#GET /projects/{project_id}/flags/{flag_key}",
+     "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#PATCH /projects/{project_id}/flags",
+     "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#POST /projects/{project_id}/flags"
+    ]
+   },
+   "posthog": {
+    "segments": [
+     "feature_flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "key": "string",
+     "filters": "object",
+     "deleted": "boolean",
+     "active": "boolean",
+     "created_by": null,
+     "created_at": "string",
+     "updated_at": "string",
+     "version": "integer",
+     "last_modified_by": null,
+     "ensure_experience_continuity": "boolean",
+     "experiment_set": "array",
+     "experiment_set_metadata": "array",
+     "surveys": "object",
+     "features": "object",
+     "rollback_conditions": null,
+     "performed_rollback": "boolean",
+     "can_edit": "boolean",
+     "tags": "array",
+     "evaluation_contexts": "array",
+     "usage_dashboard": "integer",
+     "analytics_dashboards": "array",
+     "has_enriched_analytics": "boolean",
+     "user_access_level": "string",
+     "creation_context": null,
+     "is_remote_configuration": "boolean",
+     "has_encrypted_payloads": "boolean",
+     "status": "string",
+     "evaluation_runtime": null,
+     "bucketing_identifier": null,
+     "last_called_at": "string",
+     "_create_in_folder": "string",
+     "_should_create_usage_dashboard": "boolean",
+     "is_used_in_replay_settings": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/posthog-openapi.yml#DELETE /api/projects/{project_id}/feature_flags/{id}/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/feature_flags/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/feature_flags/{id}/",
+     "openapi/_original/posthog-openapi.yml#PATCH /api/projects/{project_id}/feature_flags/{id}/",
+     "openapi/_original/posthog-openapi.yml#POST /api/projects/{project_id}/feature_flags/",
+     "openapi/_original/posthog-openapi.yml#PUT /api/projects/{project_id}/feature_flags/{id}/"
+    ]
+   },
+   "schematic": {
+    "segments": [
+     "flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "created_at": "string",
+     "default_value": "boolean",
+     "description": "string",
+     "feature": "object",
+     "feature_id": [
+      "string",
+      "null"
+     ],
+     "flag_type": "string",
+     "id": "string",
+     "key": "string",
+     "last_checked_at": [
+      "string",
+      "null"
+     ],
+     "maintainer": "object",
+     "maintainer_account_member_id": [
+      "string",
+      "null"
+     ],
+     "name": "string",
+     "rules": "array",
+     "updated_at": "string",
+     "deleted": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/schematic-openapi-v1.0.0.json#DELETE /flags/{flag_id}",
+     "openapi/_original/schematic-openapi-v1.0.0.json#GET /flags",
+     "openapi/_original/schematic-openapi-v1.0.0.json#GET /flags/{flag_id}",
+     "openapi/_original/schematic-openapi-v1.0.0.json#POST /flags",
+     "openapi/_original/schematic-openapi-v1.0.0.json#PUT /flags/{flag_id}",
+     "openapi/_original/schematic-openapi.yml#DELETE /flags/{flag_id}",
+     "openapi/_original/schematic-openapi.yml#GET /flags",
+     "openapi/_original/schematic-openapi.yml#GET /flags/{flag_id}",
+     "openapi/_original/schematic-openapi.yml#POST /flags",
+     "openapi/_original/schematic-openapi.yml#PUT /flags/{flag_id}"
+    ]
+   },
+   "statsig": {
+    "segments": [
+     "gates"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "isEnabled": "boolean",
+     "status": "string",
+     "rules": "array",
+     "tags": "array",
+     "targetApps": "array",
+     "createdTime": "integer",
+     "lastModifiedTime": "integer",
+     "type": "string",
+     "targetValue": null,
+     "operator": "string"
+    },
+    "evidence": [
+     "openapi/_original/statsig-console-api-openapi.yml#DELETE /gates/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#GET /gates",
+     "openapi/_original/statsig-console-api-openapi.yml#GET /gates/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#PATCH /gates/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#POST /gates"
+    ]
+   },
+   "unleash": {
+    "segments": [
+     "features"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "type": "string",
+     "description": "string",
+     "stale": "boolean",
+     "favorite": "boolean",
+     "impressionData": "boolean",
+     "createdAt": "string",
+     "lastSeenAt": "string",
+     "environments": "array",
+     "tags": "array",
+     "archived": "boolean",
+     "project": "string",
+     "enabled": "boolean",
+     "createdBy": "object",
+     "archivedAt": "string",
+     "variants": "array",
+     "strategies": "array",
+     "children": "array",
+     "lifecycle": "object",
+     "dependencies": "array",
+     "collaborators": "object",
+     "links": "array",
+     "value": "string",
+     "color": "string",
+     "path": "string",
+     "op": "string",
+     "from": "string"
+    },
+    "evidence": [
+     "openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/projects/{projectId}/features/{featureName}",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/projects/{projectId}/features",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/projects/{projectId}/features/{featureName}",
+     "openapi/_original/unleash-admin-api-openapi.yml#PATCH /api/admin/projects/{projectId}/features/{featureName}",
+     "openapi/_original/unleash-admin-api-openapi.yml#POST /api/admin/projects/{projectId}/features",
+     "openapi/_original/unleash-admin-api-openapi.yml#PUT /api/admin/projects/{projectId}/features/{featureName}"
+    ]
+   },
+   "vwo": {
+    "segments": [
+     "feature-flags"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "key": "string",
+     "type": "string",
+     "value": null
+    },
+    "evidence": [
+     "openapi/_original/vwo-openapi.yml#DELETE /accounts/{account_id}/fme/feature-flags/{feature_flag_id}",
+     "openapi/_original/vwo-openapi.yml#GET /accounts/{account_id}/fme/feature-flags",
+     "openapi/_original/vwo-openapi.yml#GET /accounts/{account_id}/fme/feature-flags/{feature_flag_id}",
+     "openapi/_original/vwo-openapi.yml#PATCH /accounts/{account_id}/fme/feature-flags/{feature_flag_id}",
+     "openapi/_original/vwo-openapi.yml#POST /accounts/{account_id}/fme/feature-flags"
+    ]
+   }
+  },
+  "flag_environment": {
+   "bucket": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "isProduction": "boolean",
+     "order": "integer",
+     "flagStateVersion": "integer",
+     "sdkAccess": "object"
+    },
+    "evidence": [
+     "openapi/_original/bucket-openapi.json#GET /apps/{appId}/environments",
+     "openapi/_original/bucket-openapi.json#GET /apps/{appId}/environments/{envId}"
+    ]
+   },
+   "cloudbees": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "PUT item"
+    ],
+    "properties": {
+     "enabled": "boolean",
+     "defaultValue": null,
+     "conditions": null,
+     "seed": "string",
+     "stickinessProperty": "string",
+     "variantsEnabled": "boolean",
+     "resourceId": "string",
+     "cascUrl": "string",
+     "created": "string",
+     "updated": "string",
+     "id": "string",
+     "name": "string",
+     "isDisabled": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#GET /v2/applications/{applicationId}/flags/{flagId}/configuration/environments/{environmentId}",
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#GET /v2/organizations/{orgId}/environments",
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#PATCH /v2/applications/{applicationId}/flags/{flagId}/configuration/environments/{environmentId}",
+     "openapi/_original/cloudbees-cloudbees-unify-api-current-openapi.yml#PUT /v2/applications/{applicationId}/flags/{flagId}/configuration/environments/{environmentId}"
+    ]
+   },
+   "devcycle": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "key": "string",
+     "description": "string",
+     "color": "string",
+     "_id": "string",
+     "_project": "string",
+     "type": "string",
+     "_createdBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "sdkKeys": null,
+     "settings": null,
+     "readonly": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/devcycle-management-openapi.json#DELETE /v1/projects/{project}/environments/{key}",
+     "openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/environments",
+     "openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/environments/{key}",
+     "openapi/_original/devcycle-management-openapi.json#PATCH /v1/projects/{project}/environments/{key}",
+     "openapi/_original/devcycle-management-openapi.json#POST /v1/projects/{project}/environments"
+    ]
+   },
+   "featureflip": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "key": "string",
+     "name": "string",
+     "color": "string",
+     "sortOrder": "integer",
+     "_actions": "object",
+     "environmentId": "string",
+     "environmentKey": "string",
+     "isEnabled": "boolean",
+     "defaultVariationId": "string",
+     "strategy": "string",
+     "prerequisites": "array"
+    },
+    "evidence": [
+     "openapi/_original/featureflip-openapi.json#DELETE /api/v1/orgs/{org}/projects/{project}/environments/{env}",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/environments",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/environments/{env}",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/flags/{flag}/environments",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/flags/{flag}/environments/{env}",
+     "openapi/_original/featureflip-openapi.json#POST /api/v1/orgs/{org}/projects/{project}/environments",
+     "openapi/_original/featureflip-openapi.json#PUT /api/v1/orgs/{org}/projects/{project}/environments/{env}",
+     "openapi/_original/featureflip-openapi.json#PUT /api/v1/orgs/{org}/projects/{project}/flags/{flag}/environments/{env}"
+    ]
+   },
+   "flagsmith": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "api_key": "string",
+     "description": "string",
+     "project": "integer",
+     "minimum_change_request_approvals": "integer",
+     "allow_client_traits": "boolean",
+     "hide_sensitive_data": "boolean",
+     "uuid": "string",
+     "banner_text": [
+      "string",
+      "null"
+     ],
+     "banner_colour": [
+      "string",
+      "null"
+     ],
+     "hide_disabled_flags": [
+      "boolean",
+      "null"
+     ],
+     "use_mv_v2_evaluation": "boolean",
+     "use_identity_composite_key_for_hashing": "boolean",
+     "use_v2_feature_versioning": "boolean",
+     "use_identity_overrides_in_local_eval": "boolean",
+     "is_creating": "boolean",
+     "metadata": "array",
+     "total_segment_overrides": "integer",
+     "organisation": "integer",
+     "enable_dynamo_db": "boolean",
+     "migration_status": "string",
+     "use_edge_identities": "boolean",
+     "prevent_flag_defaults": "boolean",
+     "enable_realtime_updates": "boolean",
+     "only_allow_lower_case_feature_names": "boolean",
+     "feature_name_regex": [
+      "string",
+      "null"
+     ],
+     "show_edge_identity_overrides_for_feature": "boolean",
+     "stale_flags_limit_days": "integer",
+     "edge_v2_migration_status": null,
+     "enforce_feature_owners": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/flagsmith-admin-api-openapi.yml#GET /environments/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#GET /environments/{environment_api_key}/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#PUT /environments/{environment_api_key}/",
+     "openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/environments/{api_key}/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{api_key}/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/projects/{id}/environments/",
+     "openapi/_original/flagsmith-api-openapi.json#PATCH /api/v1/environments/{api_key}/",
+     "openapi/_original/flagsmith-api-openapi.json#POST /api/v1/environments/",
+     "openapi/_original/flagsmith-api-openapi.json#PUT /api/v1/environments/{api_key}/"
+    ]
+   },
+   "freeplay": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "environments": "array",
+     "id": "string",
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/freeplay-openapi.json#DELETE /api/v2/environments/{environment_id}",
+     "openapi/_original/freeplay-openapi.json#GET /api/v2/environments",
+     "openapi/_original/freeplay-openapi.json#PATCH /api/v2/environments/{environment_id}",
+     "openapi/_original/freeplay-openapi.json#POST /api/v2/environments",
+     "openapi/_original/freeplay-openapi.json#POST /api/v2/projects/{project_id}/prompt-templates/id/{template_id}/versions/{version_id}/environments"
+    ]
+   },
+   "growthbook": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "description": "string",
+     "toggleOnList": "boolean",
+     "defaultState": "boolean",
+     "projects": "array",
+     "parent": "string",
+     "deletedId": "string"
+    },
+    "evidence": [
+     "openapi/_original/growthbook-openapi.yml#DELETE /v1/environments/{id}",
+     "openapi/_original/growthbook-openapi.yml#GET /v1/environments",
+     "openapi/_original/growthbook-openapi.yml#POST /v1/environments",
+     "openapi/_original/growthbook-openapi.yml#PUT /v1/environments/{id}"
+    ]
+   },
+   "kinde": {
+    "segments": [
+     "environment"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "code": "string",
+     "message": "string",
+     "environment": "object"
+    },
+    "evidence": [
+     "openapi/_original/kinde-management-api-openapi.yml#GET /api/v1/environment"
+    ]
+   },
+   "launchdarkly": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "key": "string",
+     "name": "string",
+     "_links": "object",
+     "_id": "string",
+     "apiKey": "string",
+     "mobileKey": "string",
+     "color": "string",
+     "defaultTtl": "integer",
+     "secureMode": "boolean",
+     "_access": "object",
+     "defaultTrackEvents": "boolean",
+     "requireComments": "boolean",
+     "confirmChanges": "boolean",
+     "tags": "array",
+     "approvalSettings": "object",
+     "resourceApprovalSettings": "object",
+     "critical": "boolean",
+     "source": "object",
+     "op": "string",
+     "path": "string",
+     "value": null
+    },
+    "evidence": [
+     "openapi/_original/launchdarkly-dev-server-openapi.yml#GET /projects/{projectKey}/environments",
+     "openapi/_original/launchdarkly-openapi.json#DELETE /api/v2/projects/{projectKey}/environments/{environmentKey}",
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/projects/{projectKey}/environments",
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/projects/{projectKey}/environments/{environmentKey}",
+     "openapi/_original/launchdarkly-openapi.json#PATCH /api/v2/projects/{projectKey}/environments/{environmentKey}",
+     "openapi/_original/launchdarkly-openapi.json#POST /api/v2/projects/{projectKey}/environments",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#DELETE /projects/{projectKey}/environments/{environmentKey}",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#GET /projects/{projectKey}/environments",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#GET /projects/{projectKey}/environments/{environmentKey}",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#PATCH /projects/{projectKey}/environments/{environmentKey}",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#POST /projects/{projectKey}/environments"
+    ]
+   },
+   "optimizely": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "key": "string",
+     "name": "string",
+     "project_id": "integer",
+     "is_primary": "boolean",
+     "sdk_key": "string",
+     "datafile_url": "string",
+     "created": "string",
+     "count": "integer",
+     "filter_url": null,
+     "first_url": null,
+     "items": "array",
+     "last_url": null,
+     "next_url": null,
+     "page": "integer",
+     "prev_url": null,
+     "reset_url": null,
+     "total_count": "integer",
+     "total_pages": "integer",
+     "url": null,
+     "archived": "boolean",
+     "datafile": "object",
+     "description": "string",
+     "has_restricted_permissions": "boolean",
+     "last_modified": "string",
+     "priority": "integer"
+    },
+    "evidence": [
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /environments",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /environments/{environment_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#PATCH /environments/{environment_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#POST /environments",
+     "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#GET /projects/{project_id}/environments",
+     "openapi/_original/optimizely-web-experimentation-optimizely-api-openapi.json#DELETE /environments/{environment_id}",
+     "openapi/_original/optimizely-web-experimentation-optimizely-api-openapi.json#GET /environments",
+     "openapi/_original/optimizely-web-experimentation-optimizely-api-openapi.json#GET /environments/{environment_id}",
+     "openapi/_original/optimizely-web-experimentation-optimizely-api-openapi.json#PATCH /environments/{environment_id}",
+     "openapi/_original/optimizely-web-experimentation-optimizely-api-openapi.json#POST /environments"
+    ]
+   },
+   "posthog": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "uuid": "string",
+     "organization": "string",
+     "project_id": "integer",
+     "api_token": "string",
+     "name": "string",
+     "completed_snippet_onboarding": "boolean",
+     "has_completed_onboarding_for": null,
+     "ingested_event": "boolean",
+     "is_demo": "boolean",
+     "timezone": null,
+     "access_control": "boolean",
+     "secret_api_token": "string",
+     "secret_api_token_backup": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "default_modifiers": "object",
+     "person_on_events_querying_enabled": "boolean",
+     "user_access_level": "string",
+     "app_urls": "array",
+     "anonymize_ips": "boolean",
+     "test_account_filters": null,
+     "test_account_filters_default_checked": "boolean",
+     "path_cleaning_filters": null,
+     "data_attributes": null,
+     "person_display_name_properties": "array",
+     "correlation_config": null,
+     "autocapture_opt_out": "boolean",
+     "autocapture_exceptions_opt_in": "boolean",
+     "autocapture_web_vitals_opt_in": "boolean",
+     "autocapture_web_vitals_allowed_metrics": null,
+     "autocapture_exceptions_errors_to_ignore": null,
+     "capture_console_log_opt_in": "boolean",
+     "logs_settings": null,
+     "capture_performance_opt_in": "boolean",
+     "session_recording_opt_in": "boolean",
+     "session_recording_sample_rate": "string",
+     "session_recording_minimum_duration_milliseconds": "integer",
+     "session_recording_linked_flag": null,
+     "session_recording_network_payload_capture_config": null,
+     "session_recording_masking_config": null,
+     "session_recording_url_trigger_config": "array",
+     "session_recording_url_blocklist_config": "array",
+     "session_recording_event_trigger_config": "array",
+     "session_recording_trigger_match_type_config": "string",
+     "session_recording_trigger_groups": null,
+     "session_recording_retention_period": "string",
+     "session_replay_config": null,
+     "survey_config": null,
+     "week_start_day": null,
+     "primary_dashboard": "integer",
+     "live_events_columns": "array",
+     "recording_domains": "array",
+     "cookieless_server_hash_mode": null,
+     "human_friendly_comparison_periods": "boolean",
+     "inject_web_apps": "boolean",
+     "extra_settings": null,
+     "modifiers": null,
+     "surveys_opt_in": "boolean",
+     "heatmaps_opt_in": "boolean",
+     "flags_persistence_default": "boolean",
+     "feature_flag_confirmation_enabled": "boolean",
+     "feature_flag_confirmation_message": "string",
+     "default_evaluation_contexts_enabled": "boolean",
+     "require_evaluation_contexts": "boolean",
+     "capture_dead_clicks": "boolean",
+     "default_data_theme": "integer",
+     "revenue_analytics_config": "object",
+     "marketing_analytics_config": "object",
+     "customer_analytics_config": "object",
+     "onboarding_tasks": null,
+     "base_currency": null,
+     "web_analytics_pre_aggregated_tables_enabled": "boolean",
+     "receive_org_level_activity_logs": "boolean",
+     "business_model": null,
+     "conversations_enabled": "boolean",
+     "conversations_settings": null,
+     "proactive_tasks_enabled": "boolean",
+     "effective_membership_level": null,
+     "has_group_types": "boolean",
+     "group_types": "array",
+     "live_events_token": "string",
+     "product_intents": "array",
+     "managed_viewsets": "object",
+     "available_setup_task_ids": "array"
+    },
+    "evidence": [
+     "openapi/_original/posthog-openapi.yml#DELETE /api/projects/{project_id}/environments/{id}/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/environments/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/environments/{id}/",
+     "openapi/_original/posthog-openapi.yml#PATCH /api/projects/{project_id}/environments/{id}/",
+     "openapi/_original/posthog-openapi.yml#POST /api/projects/{project_id}/environments/",
+     "openapi/_original/posthog-openapi.yml#PUT /api/projects/{project_id}/environments/{id}/"
+    ]
+   },
+   "schematic": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "created_at": "string",
+     "description": [
+      "string",
+      "null"
+     ],
+     "environment": "object",
+     "environment_id": [
+      "string",
+      "null"
+     ],
+     "id": "string",
+     "integration": "object",
+     "last_used_at": [
+      "string",
+      "null"
+     ],
+     "name": "string",
+     "rate_limit_percent": [
+      "integer",
+      "null"
+     ],
+     "readonly": "boolean",
+     "scopes": "array",
+     "updated_at": "string",
+     "environment_type": "string",
+     "deleted": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/schematic-openapi-v1.0.0.json#DELETE /environments/{environment_id}",
+     "openapi/_original/schematic-openapi-v1.0.0.json#POST /environments",
+     "openapi/_original/schematic-openapi-v1.0.0.json#PUT /environments/{environment_id}",
+     "openapi/_original/schematic-openapi.yml#DELETE /environments/{environment_id}",
+     "openapi/_original/schematic-openapi.yml#GET /environments",
+     "openapi/_original/schematic-openapi.yml#GET /environments/{environment_id}",
+     "openapi/_original/schematic-openapi.yml#POST /environments",
+     "openapi/_original/schematic-openapi.yml#PUT /environments/{environment_id}"
+    ]
+   },
+   "split": {
+    "segments": [
+     "environments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "PATCH item",
+     "POST item"
+    ],
+    "properties": {
+     "name": "string",
+     "environment": "object",
+     "trafficType": "object",
+     "killed": "boolean",
+     "treatments": "array",
+     "defaultTreatment": "string",
+     "baselineTreatment": "string",
+     "rules": "array",
+     "defaultRule": "array",
+     "trafficAllocation": "integer",
+     "lastModified": "integer",
+     "creationTime": "integer",
+     "comment": "string"
+    },
+    "evidence": [
+     "openapi/_original/split-feature-flag-api-openapi.yml#DELETE /splits/ws/{workspaceId}/{featureFlagName}/environments/{environmentId}",
+     "openapi/_original/split-feature-flag-api-openapi.yml#GET /splits/ws/{workspaceId}/environments/{environmentId}",
+     "openapi/_original/split-feature-flag-api-openapi.yml#GET /splits/ws/{workspaceId}/{featureFlagName}/environments/{environmentId}",
+     "openapi/_original/split-feature-flag-api-openapi.yml#PATCH /splits/ws/{workspaceId}/{featureFlagName}/environments/{environmentId}",
+     "openapi/_original/split-feature-flag-api-openapi.yml#POST /splits/ws/{workspaceId}/{featureFlagName}/environments/{environmentId}"
+    ]
+   },
+   "unleash": {
+    "segments": [
+     "environments",
+     "environment"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "type": "string",
+     "enabled": "boolean",
+     "protected": "boolean",
+     "sortOrder": "integer",
+     "projectCount": "integer",
+     "apiTokenCount": "integer",
+     "enabledToggleCount": "integer",
+     "requiredApprovals": "integer",
+     "instanceId": "string",
+     "sdkVersion": "string",
+     "clientIp": "string",
+     "lastSeen": "string",
+     "featureName": "string",
+     "environment": "string",
+     "variantCount": "number",
+     "strategies": "array",
+     "variants": "array",
+     "changeRequestIds": "array",
+     "milestoneName": "string",
+     "milestoneOrder": "number",
+     "totalMilestones": "number",
+     "lastSeenAt": "string",
+     "hasStrategies": "boolean",
+     "hasEnabledStrategies": "boolean",
+     "releasePlans": "array",
+     "yes": "integer",
+     "no": "integer",
+     "changeRequestsEnabled": "boolean",
+     "defaultStrategy": "object"
+    },
+    "evidence": [
+     "openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/environments/{name}",
+     "openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/projects/{projectId}/environments/{environment}",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/environments",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/environments/{name}",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/metrics/instances/{appName}/environment/{environment}",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/projects/{projectId}/features/{featureName}/environments/{environment}",
+     "openapi/_original/unleash-admin-api-openapi.yml#POST /api/admin/environments",
+     "openapi/_original/unleash-admin-api-openapi.yml#POST /api/admin/projects/{projectId}/environments"
+    ]
+   }
+  },
+  "flag_segment": {
+   "amplitude": {
+    "segments": [
+     "cohorts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "size": "integer",
+     "lastComputed": "string",
+     "archived": "boolean",
+     "owner": "string",
+     "appId": "integer"
+    },
+    "evidence": [
+     "openapi/_original/amplitude-behavioral-cohorts-api-openapi.yml#GET /api/3/cohorts"
+    ]
+   },
+   "convert": {
+    "segments": [
+     "audiences"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "description": "string",
+     "status": "string",
+     "name": "string",
+     "preset": "boolean",
+     "selected_default": "boolean",
+     "stats": "object",
+     "type": "string",
+     "rules": null,
+     "onlyCount": "boolean",
+     "results_per_page": "integer",
+     "sort_direction": "string",
+     "search": "string",
+     "is_default": "boolean",
+     "sort_by": "string",
+     "experiences": "array",
+     "usage": "string",
+     "page": "integer",
+     "include": "array",
+     "only": "array",
+     "except": "array"
+    },
+    "evidence": [
+     "openapi/_original/convert-openapi.yml#GET /accounts/{account_id}/projects/{project_id}/audiences/{audience_id}",
+     "openapi/_original/convert-openapi.yml#POST /accounts/{account_id}/projects/{project_id}/audiences"
+    ]
+   },
+   "devcycle": {
+    "segments": [
+     "audiences"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "key": "string",
+     "description": "string",
+     "_id": "string",
+     "_project": "string",
+     "filters": null,
+     "source": "string",
+     "_createdBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "tags": "array",
+     "readonly": "boolean",
+     "hasUsage": "boolean",
+     "instructions": "array"
+    },
+    "evidence": [
+     "openapi/_original/devcycle-management-openapi.json#DELETE /v1/projects/{project}/audiences/{key}",
+     "openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/audiences",
+     "openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/audiences/{key}",
+     "openapi/_original/devcycle-management-openapi.json#PATCH /v1/projects/{project}/audiences/{key}",
+     "openapi/_original/devcycle-management-openapi.json#PATCH /v1/semantic/projects/{project}/audiences/{key}",
+     "openapi/_original/devcycle-management-openapi.json#POST /v1/projects/{project}/audiences"
+    ]
+   },
+   "featureflip": {
+    "segments": [
+     "segments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "key": "string",
+     "name": "string",
+     "description": "string",
+     "conditions": "array",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "_actions": "object",
+     "attribute": "string",
+     "operator": "string",
+     "values": "array",
+     "negate": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/featureflip-openapi.json#DELETE /api/v1/orgs/{org}/projects/{project}/segments/{segment}",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/segments",
+     "openapi/_original/featureflip-openapi.json#GET /api/v1/orgs/{org}/projects/{project}/segments/{segment}",
+     "openapi/_original/featureflip-openapi.json#POST /api/v1/orgs/{org}/projects/{project}/segments",
+     "openapi/_original/featureflip-openapi.json#PUT /api/v1/orgs/{org}/projects/{project}/segments/{segment}"
+    ]
+   },
+   "flagsmith": {
+    "segments": [
+     "segments",
+     "segment",
+     "cohorts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "results": "array",
+     "type": "string",
+     "rules": "array",
+     "conditions": "array",
+     "id": "integer",
+     "uuid": "string",
+     "name": "string",
+     "description": [
+      "string",
+      "null"
+     ],
+     "metadata": "array",
+     "segment": "integer",
+     "source_type": null,
+     "version": "integer",
+     "created_at": "string",
+     "last_synced_at": [
+      "string",
+      "null"
+     ],
+     "membership_counts": null,
+     "api_key": "string",
+     "base_url": null,
+     "updated_at": [
+      "string",
+      "null"
+     ],
+     "project": "integer",
+     "feature": [
+      "integer",
+      "null"
+     ],
+     "version_of": [
+      "integer",
+      "null"
+     ],
+     "managed_by": null,
+     "cohort": null,
+     "has_overrides": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/flagsmith-admin-api-openapi.yml#DELETE /projects/{project_id}/segments/{segment_id}/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/segments/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#GET /projects/{project_id}/segments/{segment_id}/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#POST /projects/{project_id}/segments/",
+     "openapi/_original/flagsmith-admin-api-openapi.yml#PUT /projects/{project_id}/segments/{segment_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/environments/{environment_api_key}/cohorts/{cohort_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/environments/{environment_api_key}/integrations/segment/{id}/",
+     "openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/projects/{project_pk}/segments/{id}/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/cohorts/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/cohorts/{cohort_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/integrations/segment/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/integrations/segment/{id}/"
+    ]
+   },
+   "growthbook": {
+    "segments": [
+     "segments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "string",
+     "owner": "string",
+     "ownerEmail": "string",
+     "datasourceId": "string",
+     "identifierType": "string",
+     "name": "string",
+     "description": "string",
+     "query": "string",
+     "dateCreated": "string",
+     "dateUpdated": "string",
+     "managedBy": "string",
+     "type": "string",
+     "factTableId": "string",
+     "filters": "array",
+     "projects": "array",
+     "limit": "integer",
+     "offset": "integer",
+     "count": "integer",
+     "total": "integer",
+     "hasMore": "boolean",
+     "nextOffset": null,
+     "deletedId": "string"
+    },
+    "evidence": [
+     "openapi/_original/growthbook-openapi.yml#DELETE /v1/segments/{id}",
+     "openapi/_original/growthbook-openapi.yml#GET /v1/segments",
+     "openapi/_original/growthbook-openapi.yml#GET /v1/segments/{id}",
+     "openapi/_original/growthbook-openapi.yml#POST /v1/segments",
+     "openapi/_original/growthbook-openapi.yml#POST /v1/segments/{id}"
+    ]
+   },
+   "optimizely": {
+    "segments": [
+     "audiences",
+     "segments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "description": "string",
+     "customer_count": "integer",
+     "segment_ids": "array",
+     "revision": "integer",
+     "metadata": "object",
+     "definition": "object",
+     "id": "integer",
+     "project_id": "integer",
+     "conditions": "string",
+     "created": "string",
+     "last_modified": "string",
+     "is_classic": "boolean",
+     "archived": "boolean",
+     "experiment_count": "integer",
+     "for_journey": "boolean",
+     "segmentation": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/optimizely-data-platform-openapi.yml#GET /segments",
+     "openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#DELETE /segments/{segment_id}",
+     "openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#GET /segments",
+     "openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#GET /segments/{segment_id}",
+     "openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#POST /segments/{segment_id}",
+     "openapi/_original/optimizely-data-platform-realtimesegments-openapi.json#PUT /segments/{segment_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /audiences",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /audiences/{audience_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#PATCH /audiences/{audience_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#POST /audiences",
+     "openapi/_original/optimizely-web-experimentation-openapi.yml#GET /audiences",
+     "openapi/_original/optimizely-web-experimentation-openapi.yml#GET /audiences/{audience_id}"
+    ]
+   },
+   "posthog": {
+    "segments": [
+     "cohorts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "description": "string",
+     "groups": null,
+     "deleted": "boolean",
+     "filters": null,
+     "query": null,
+     "version": "integer",
+     "pending_version": "integer",
+     "is_calculating": "boolean",
+     "created_by": null,
+     "created_at": "string",
+     "last_calculation": "string",
+     "last_backfill_person_properties_at": "string",
+     "errors_calculating": "integer",
+     "last_error_message": "string",
+     "count": "integer",
+     "is_static": "boolean",
+     "cohort_type": null,
+     "experiment_set": "array",
+     "_create_in_folder": "string",
+     "_create_static_person_ids": "array"
+    },
+    "evidence": [
+     "openapi/_original/posthog-openapi.yml#DELETE /api/projects/{project_id}/cohorts/{id}/",
+     "openapi/_original/posthog-openapi.yml#GET /api/environments/{environment_id}/persons/cohorts/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/cohorts/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/cohorts/{id}/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/persons/cohorts/",
+     "openapi/_original/posthog-openapi.yml#PATCH /api/projects/{project_id}/cohorts/{id}/",
+     "openapi/_original/posthog-openapi.yml#POST /api/projects/{project_id}/cohorts/",
+     "openapi/_original/posthog-openapi.yml#PUT /api/projects/{project_id}/cohorts/{id}/"
+    ]
+   },
+   "statsig": {
+    "segments": [
+     "segments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "type": "string",
+     "rules": "array",
+     "tags": "array",
+     "createdTime": "integer",
+     "targetValue": null,
+     "operator": "string"
+    },
+    "evidence": [
+     "openapi/_original/statsig-console-api-openapi.yml#DELETE /segments/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#GET /segments",
+     "openapi/_original/statsig-console-api-openapi.yml#GET /segments/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#PATCH /segments/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#POST /segments"
+    ]
+   },
+   "unleash": {
+    "segments": [
+     "segments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "description": "string",
+     "constraints": "array",
+     "usedInFeatures": "integer",
+     "usedInProjects": "integer",
+     "project": "string",
+     "createdBy": "string",
+     "createdAt": "string",
+     "contextName": "string",
+     "operator": "string",
+     "caseInsensitive": "boolean",
+     "inverted": "boolean",
+     "values": "array",
+     "value": "string"
+    },
+    "evidence": [
+     "openapi/_original/unleash-admin-api-openapi.yml#DELETE /api/admin/segments/{id}",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/segments",
+     "openapi/_original/unleash-admin-api-openapi.yml#GET /api/admin/segments/{id}",
+     "openapi/_original/unleash-admin-api-openapi.yml#POST /api/admin/segments",
+     "openapi/_original/unleash-admin-api-openapi.yml#PUT /api/admin/segments/{id}"
+    ]
+   }
+  },
+  "experiment": {
+   "amplitude": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "projectId": "string",
+     "key": "string",
+     "name": "string",
+     "description": "string",
+     "enabled": "boolean",
+     "evaluationMode": "string",
+     "bucketingKey": "string",
+     "bucketingSalt": "string",
+     "variants": "array",
+     "deployments": "array",
+     "segments": "array",
+     "state": "string",
+     "rolledOutVariant": "string",
+     "startDate": "string",
+     "endDate": "string",
+     "payload": null,
+     "rolloutWeight": "integer"
+    },
+    "evidence": [
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/experiments",
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#GET /api/1/experiments/{id}",
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#PATCH /api/1/experiments/{id}",
+     "openapi/_original/amplitude-experiment-management-api-openapi.yml#POST /api/1/experiments"
+    ]
+   },
+   "eppo": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "status": "string",
+     "startDate": "string",
+     "endDate": "string",
+     "primaryMetricId": "string",
+     "subjectEntityKey": "string",
+     "variations": "array"
+    },
+    "evidence": [
+     "openapi/_original/eppo-openapi.yml#GET /experiments",
+     "openapi/_original/eppo-openapi.yml#GET /experiments/{experimentId}",
+     "openapi/_original/eppo-openapi.yml#POST /experiments"
+    ]
+   },
+   "flagsmith": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "feature": null,
+     "name": "string",
+     "hypothesis": "string",
+     "status": null,
+     "metrics": "array",
+     "experiment_rollout": null,
+     "created_at": "string",
+     "updated_at": "string",
+     "started_at": [
+      "string",
+      "null"
+     ],
+     "ended_at": [
+      "string",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/flagsmith-api-openapi.json#DELETE /api/v1/environments/{environment_api_key}/experiments/{experiment_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/experiments/",
+     "openapi/_original/flagsmith-api-openapi.json#GET /api/v1/environments/{environment_api_key}/experiments/{experiment_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#PATCH /api/v1/environments/{environment_api_key}/experiments/{experiment_id}/",
+     "openapi/_original/flagsmith-api-openapi.json#POST /api/v1/environments/{environment_api_key}/experiments/",
+     "openapi/_original/flagsmith-api-openapi.json#PUT /api/v1/environments/{environment_api_key}/experiments/{experiment_id}/"
+    ]
+   },
+   "growthbook": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "string",
+     "trackingKey": "string",
+     "dateCreated": "string",
+     "dateUpdated": "string",
+     "name": "string",
+     "type": "string",
+     "project": "string",
+     "hypothesis": "string",
+     "description": "string",
+     "tags": "array",
+     "owner": "string",
+     "ownerEmail": "string",
+     "archived": "boolean",
+     "status": "string",
+     "autoRefresh": "boolean",
+     "hashAttribute": "string",
+     "fallbackAttribute": "string",
+     "hashVersion": null,
+     "disableStickyBucketing": "boolean",
+     "bucketVersion": "number",
+     "minBucketVersion": "number",
+     "variations": "array",
+     "phases": "array",
+     "settings": "object",
+     "resultSummary": "object",
+     "shareLevel": "string",
+     "publicUrl": "string",
+     "banditScheduleValue": "number",
+     "banditScheduleUnit": "string",
+     "banditBurnInValue": "number",
+     "banditBurnInUnit": "string",
+     "banditConversionWindowValue": "number",
+     "banditConversionWindowUnit": "string",
+     "linkedFeatures": "array",
+     "attributeScopeAllProjects": "boolean",
+     "hasVisualChangesets": "boolean",
+     "hasURLRedirects": "boolean",
+     "customFields": "object",
+     "customMetricSlices": "array",
+     "precomputedUnitDimensionIds": "array",
+     "defaultDashboardId": "string",
+     "templateId": "string",
+     "statusUpdateSchedule": null,
+     "nextScheduledStatusUpdate": null,
+     "limit": "integer",
+     "offset": "integer",
+     "count": "integer",
+     "total": "integer",
+     "hasMore": "boolean",
+     "nextOffset": null,
+     "datasourceId": "string",
+     "assignmentQuery": "object",
+     "assignmentQueryId": "string",
+     "bypassDuplicateKeyCheck": "boolean",
+     "metrics": "array",
+     "secondaryMetrics": "array",
+     "guardrailMetrics": "array",
+     "activationMetric": "string",
+     "segmentId": "string",
+     "queryFilter": "string",
+     "releasedVariationId": "string",
+     "excludeFromPayload": "boolean",
+     "inProgressConversions": "string",
+     "attributionModel": "string",
+     "lookbackOverride": "object",
+     "statsEngine": "string",
+     "regressionAdjustmentEnabled": "boolean",
+     "sequentialTestingEnabled": "boolean",
+     "sequentialTestingTuningParameter": "number",
+     "postStratificationEnabled": null,
+     "decisionFrameworkSettings": "object",
+     "metricOverrides": "array",
+     "ignoreWarnings": "boolean",
+     "enhancedStatus": "object",
+     "results": "string",
+     "winner": "number",
+     "analysis": "string",
+     "experimentId": "string",
+     "experimentName": "string",
+     "result": "string",
+     "date": "string"
+    },
+    "evidence": [
+     "openapi/_original/growthbook-openapi.yml#GET /v1/experiments",
+     "openapi/_original/growthbook-openapi.yml#GET /v1/experiments/{id}",
+     "openapi/_original/growthbook-openapi.yml#GET /v1/metrics/{id}/experiments",
+     "openapi/_original/growthbook-openapi.yml#POST /v1/experiments",
+     "openapi/_original/growthbook-openapi.yml#POST /v1/experiments/{id}"
+    ]
+   },
+   "kameleoon": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/kameleoon-openapi.yml#GET /experiments",
+     "openapi/_original/kameleoon-openapi.yml#POST /experiments"
+    ]
+   },
+   "launchdarkly": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "_id": "string",
+     "key": "string",
+     "name": "string",
+     "description": "string",
+     "_maintainerId": "string",
+     "_creationDate": "integer",
+     "environmentKey": "string",
+     "methodology": "string",
+     "dataSource": "string",
+     "archivedDate": "integer",
+     "tags": "array",
+     "_links": "object",
+     "holdoutId": "string",
+     "currentIteration": "object",
+     "type": "string",
+     "_access": "object",
+     "draftIteration": "object",
+     "previousIterations": "array",
+     "analysisConfig": "object",
+     "mutableFieldsByStatus": "object",
+     "maintainerId": "string",
+     "iteration": "object",
+     "comment": "string",
+     "instructions": "array"
+    },
+    "evidence": [
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/projects/{projectKey}/environments/{environmentKey}/experiments",
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/projects/{projectKey}/environments/{environmentKey}/experiments/{experimentKey}",
+     "openapi/_original/launchdarkly-openapi.json#GET /api/v2/projects/{projectKey}/experiments",
+     "openapi/_original/launchdarkly-openapi.json#PATCH /api/v2/projects/{projectKey}/environments/{environmentKey}/experiments/{experimentKey}",
+     "openapi/_original/launchdarkly-openapi.json#POST /api/v2/projects/{projectKey}/environments/{environmentKey}/experiments",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#GET /projects/{projectKey}/environments/{environmentKey}/experiments",
+     "openapi/_original/launchdarkly-rest-api-openapi.yml#POST /projects/{projectKey}/environments/{environmentKey}/experiments"
+    ]
+   },
+   "optimizely": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "originalContentKey": "integer",
+     "metric": "string",
+     "startOn": "string",
+     "endOn": "string",
+     "startedOn": "string",
+     "completedOn": "string",
+     "endCondition": "string",
+     "numberOfParticipants": "integer",
+     "isPaused": "boolean",
+     "includedAllocation": "integer",
+     "originalAllocation": "integer",
+     "variant1Allocation": "integer",
+     "variant2Allocation": "integer",
+     "variant3Allocation": "integer",
+     "originalClickTrackingSelector": "string",
+     "variant1ClickTrackingSelector": "string",
+     "variant2ClickTrackingSelector": "string",
+     "variant3ClickTrackingSelector": "string",
+     "variant1ContentKey": "integer",
+     "variant2ContentKey": "integer",
+     "variant3ContentKey": "integer",
+     "websiteId": "string",
+     "status": "string",
+     "createdOn": "string",
+     "createdBy": "string",
+     "modifiedOn": "string",
+     "modifiedBy": "string",
+     "project_id": "integer",
+     "variations": "array",
+     "metrics": "array",
+     "created": "string",
+     "last_modified": "string",
+     "deployed_variation_id": "integer",
+     "experiment_end_time": "string",
+     "experiment_id": "integer",
+     "experiment_start_time": "string",
+     "type": "string",
+     "holdback": "integer",
+     "audience_conditions": "string",
+     "page_ids": "array",
+     "allocation_policy": "string",
+     "campaign_id": "integer",
+     "changes": "array",
+     "custom_field_values": "object",
+     "earliest": "string",
+     "environments": "object",
+     "feature_id": "integer",
+     "feature_key": "string",
+     "feature_name": "string",
+     "is_classic": "boolean",
+     "key": "string",
+     "latest": "string",
+     "multivariate_traffic_policy": "string",
+     "results_token": "string",
+     "schedule": "object",
+     "traffic_allocation": "integer",
+     "url_targeting": "object",
+     "whitelist": "array"
+    },
+    "evidence": [
+     "openapi/_original/optimizely-configured-commerce-admin-api-v1-openapi.json#GET /api/v1/admin/Experiments",
+     "openapi/_original/optimizely-configured-commerce-admin-api-v1-openapi.json#POST /api/v1/admin/Experiments",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#DELETE /experiments/{experiment_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /experiments",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#GET /experiments/{experiment_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#PATCH /experiments/{experiment_id}",
+     "openapi/_original/optimizely-feature-experimentation-openapi.yml#POST /experiments",
+     "openapi/_original/optimizely-feature-experimentation-optimizely-feature-experimentation-api-openapi.json#GET /projects/{project_id}/holdouts/{holdout_id}/experiments",
+     "openapi/_original/optimizely-web-experimentation-openapi.yml#DELETE /experiments/{experiment_id}",
+     "openapi/_original/optimizely-web-experimentation-openapi.yml#GET /experiments",
+     "openapi/_original/optimizely-web-experimentation-openapi.yml#GET /experiments/{experiment_id}",
+     "openapi/_original/optimizely-web-experimentation-openapi.yml#PATCH /experiments/{experiment_id}"
+    ]
+   },
+   "parea": {
+    "segments": [
+     "experiment",
+     "experiments"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "run_name": "string",
+     "project_uuid": "string",
+     "is_public": "boolean",
+     "metadata": "object",
+     "uuid": "string",
+     "created_at": "string",
+     "status": null,
+     "pinned_stats": "array",
+     "num_samples": "integer",
+     "project_name": "string",
+     "metadata_filter": "object",
+     "experiment_name_filter": "string",
+     "run_name_filter": "string",
+     "experiment_uuids": "array"
+    },
+    "evidence": [
+     "openapi/_original/parea-rest-api-openapi.yml#POST /api/parea/v1/experiment",
+     "openapi/_original/parea-rest-api-openapi.yml#POST /api/parea/v1/experiments"
+    ]
+   },
+   "posthog": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "description": "string",
+     "start_date": "string",
+     "end_date": "string",
+     "feature_flag_key": "string",
+     "feature_flag": "object",
+     "holdout": null,
+     "holdout_id": "integer",
+     "exposure_cohort": "integer",
+     "parameters": null,
+     "secondary_metrics": null,
+     "saved_metrics": "array",
+     "saved_metrics_ids": "array",
+     "filters": null,
+     "archived": "boolean",
+     "deleted": "boolean",
+     "created_by": null,
+     "created_at": "string",
+     "updated_at": "string",
+     "type": null,
+     "exposure_criteria": null,
+     "metrics": null,
+     "metrics_secondary": null,
+     "stats_config": null,
+     "scheduling_config": null,
+     "allow_unknown_events": "boolean",
+     "_create_in_folder": "string",
+     "conclusion": null,
+     "conclusion_comment": "string",
+     "primary_metrics_ordered_uuids": null,
+     "secondary_metrics_ordered_uuids": null,
+     "only_count_matured_users": "boolean",
+     "update_feature_flag_params": "boolean",
+     "status": null,
+     "user_access_level": "string"
+    },
+    "evidence": [
+     "openapi/_original/posthog-openapi.yml#DELETE /api/projects/{project_id}/experiments/{id}/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/experiments/",
+     "openapi/_original/posthog-openapi.yml#GET /api/projects/{project_id}/experiments/{id}/",
+     "openapi/_original/posthog-openapi.yml#PATCH /api/projects/{project_id}/experiments/{id}/",
+     "openapi/_original/posthog-openapi.yml#POST /api/projects/{project_id}/experiments/",
+     "openapi/_original/posthog-openapi.yml#PUT /api/projects/{project_id}/experiments/{id}/"
+    ]
+   },
+   "seldon": {
+    "segments": [
+     "experiment"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "apiVersion": "string",
+     "kind": "string",
+     "metadata": "object",
+     "spec": "object",
+     "status": "object",
+     "annotations": "object",
+     "creationTimestamp": "string",
+     "deletionGracePeriodSeconds": "integer",
+     "deletionTimestamp": "string",
+     "finalizers": "array",
+     "generateName": "string",
+     "generation": "integer",
+     "labels": "object",
+     "managedFields": "array",
+     "name": "string",
+     "namespace": "string",
+     "ownerReferences": "array",
+     "resourceVersion": "string",
+     "selfLink": "string",
+     "uid": "string"
+    },
+    "evidence": [
+     "openapi/_original/seldon-enterprise-platform-api-openapi.yml#DELETE /namespaces/{namespace}/pipelines/{name}/experiment",
+     "openapi/_original/seldon-enterprise-platform-api-openapi.yml#GET /namespaces/{namespace}/pipelines/{name}/experiment",
+     "openapi/_original/seldon-enterprise-platform-api-openapi.yml#POST /namespaces/{namespace}/pipelines/{name}/experiment",
+     "openapi/_original/seldon-enterprise-platform-api-openapi.yml#PUT /namespaces/{namespace}/pipelines/{name}/experiment"
+    ]
+   },
+   "statsig": {
+    "segments": [
+     "experiments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "hypothesis": "string",
+     "status": "string",
+     "groups": "array",
+     "allocation": "number",
+     "layerID": "string",
+     "targetingGateID": "string",
+     "tags": "array",
+     "createdTime": "integer",
+     "lastModifiedTime": "integer"
+    },
+    "evidence": [
+     "openapi/_original/statsig-console-api-openapi.yml#DELETE /experiments/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#GET /experiments",
+     "openapi/_original/statsig-console-api-openapi.yml#GET /experiments/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#GET /layers/{id}/experiments",
+     "openapi/_original/statsig-console-api-openapi.yml#PATCH /experiments/{id}",
+     "openapi/_original/statsig-console-api-openapi.yml#POST /experiments"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_param": {
+   "lower": [
+    "akuity",
+    "amplitude",
+    "apptimize",
+    "argo",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "dream-sports",
+    "featureflip",
+    "flagsmith",
+    "freeplay",
+    "growthbook",
+    "kinde",
+    "launchdarkly",
+    "openfeature",
+    "optimizely",
+    "posthog",
+    "schematic",
+    "seldon",
+    "statsig",
+    "stigg",
+    "unleash"
+   ],
+   "camelCase": [
+    "ab-tasty",
+    "bucket",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "dream-sports",
+    "eppo",
+    "featureflip",
+    "growthbook",
+    "launchdarkly",
+    "monetate",
+    "ninetailed",
+    "optimizely",
+    "seldon",
+    "split",
+    "statsig",
+    "unleash"
+   ],
+   "snake_case": [
+    "akuity",
+    "amplitude",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "dream-sports",
+    "flagsmith",
+    "freeplay",
+    "kinde",
+    "optimizely",
+    "parea",
+    "posthog",
+    "schematic",
+    "seldon",
+    "unbounce",
+    "vwo"
+   ],
+   "kebab-case": [
+    "apptimize",
+    "dream-sports",
+    "monetate"
+   ],
+   "other": [
+    "cloudbees",
+    "posthog"
+   ],
+   "PascalCase": [
+    "optimizely"
+   ]
+  },
+  "path_segment": {
+   "lower": [
+    "ab-tasty",
+    "akuity",
+    "amplitude",
+    "apptimize",
+    "argo",
+    "bucket",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "dream-sports",
+    "dynamic-yield",
+    "eppo",
+    "featureflip",
+    "flagsmith",
+    "freeplay",
+    "growthbook",
+    "hypertune",
+    "kameleoon",
+    "kinde",
+    "launchdarkly",
+    "monetate",
+    "ninetailed",
+    "openfeature",
+    "optimizely",
+    "parea",
+    "posthog",
+    "schematic",
+    "seldon",
+    "split",
+    "statsig",
+    "stigg",
+    "unbounce",
+    "uniform",
+    "unleash",
+    "vwo"
+   ],
+   "kebab-case": [
+    "akuity",
+    "amplitude",
+    "apptimize",
+    "argo",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "dream-sports",
+    "featureflip",
+    "flagsmith",
+    "freeplay",
+    "growthbook",
+    "launchdarkly",
+    "monetate",
+    "optimizely",
+    "parea",
+    "posthog",
+    "schematic",
+    "seldon",
+    "split",
+    "uniform",
+    "unleash",
+    "vwo"
+   ],
+   "snake_case": [
+    "convert",
+    "dream-sports",
+    "flagsmith",
+    "kinde",
+    "monetate",
+    "optimizely",
+    "parea",
+    "posthog",
+    "schematic",
+    "statsig",
+    "unbounce",
+    "unleash"
+   ],
+   "camelCase": [
+    "cloudbees",
+    "devcycle",
+    "dream-sports",
+    "growthbook",
+    "launchdarkly",
+    "optimizely",
+    "posthog",
+    "seldon",
+    "split",
+    "unleash"
+   ],
+   "other": [
+    "amplitude",
+    "dream-sports",
+    "dynamic-yield",
+    "flagsmith",
+    "leanplum",
+    "optimizely"
+   ],
+   "PascalCase": [
+    "amplitude",
+    "optimizely"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "ab-tasty",
+    "akuity",
+    "amplitude",
+    "apptimize",
+    "argo",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "dream-sports",
+    "eppo",
+    "featureflip",
+    "flagsmith",
+    "freeplay",
+    "growthbook",
+    "hypertune",
+    "kameleoon",
+    "kinde",
+    "launchdarkly",
+    "leanplum",
+    "monetate",
+    "ninetailed",
+    "optimizely",
+    "posthog",
+    "schematic",
+    "seldon",
+    "split",
+    "statsig",
+    "stigg",
+    "uniform",
+    "unleash",
+    "vwo"
+   ],
+   "camelCase": [
+    "ab-tasty",
+    "akuity",
+    "amplitude",
+    "argo",
+    "bucket",
+    "cloudbees",
+    "devcycle",
+    "dream-sports",
+    "flagsmith",
+    "growthbook",
+    "hypertune",
+    "launchdarkly",
+    "leanplum",
+    "openfeature",
+    "optimizely",
+    "posthog",
+    "seldon",
+    "stigg",
+    "uniform",
+    "unleash"
+   ],
+   "snake_case": [
+    "amplitude",
+    "convert",
+    "devcycle",
+    "dream-sports",
+    "flagsmith",
+    "freeplay",
+    "kameleoon",
+    "kinde",
+    "monetate",
+    "optimizely",
+    "posthog",
+    "schematic"
+   ],
+   "other": [
+    "argo",
+    "cloudbees",
+    "optimizely",
+    "posthog"
+   ],
+   "PascalCase": [
+    "optimizely",
+    "seldon"
+   ],
+   "kebab-case": [
+    "split"
+   ]
+  },
+  "property": {
+   "lower": [
+    "ab-tasty",
+    "amplitude",
+    "apptimize",
+    "bucket",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "eppo",
+    "featureflip",
+    "flagsmith",
+    "freeplay",
+    "growthbook",
+    "kinde",
+    "launchdarkly",
+    "openfeature",
+    "optimizely",
+    "parea",
+    "posthog",
+    "schematic",
+    "seldon",
+    "split",
+    "statsig",
+    "unleash",
+    "vwo"
+   ],
+   "camelCase": [
+    "amplitude",
+    "apptimize",
+    "bucket",
+    "cloudbees",
+    "convert",
+    "devcycle",
+    "eppo",
+    "featureflip",
+    "growthbook",
+    "launchdarkly",
+    "openfeature",
+    "optimizely",
+    "seldon",
+    "split",
+    "statsig",
+    "unleash"
+   ],
+   "snake_case": [
+    "ab-tasty",
+    "convert",
+    "flagsmith",
+    "kinde",
+    "optimizely",
+    "parea",
+    "posthog",
+    "schematic"
+   ],
+   "other": [
+    "devcycle",
+    "featureflip",
+    "launchdarkly",
+    "posthog"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "akuity",
+    "amplitude",
+    "featureflip",
+    "flagsmith",
+    "growthbook",
+    "launchdarkly",
+    "optimizely",
+    "posthog",
+    "schematic",
+    "seldon",
+    "split",
+    "statsig",
+    "stigg",
+    "uniform",
+    "unleash",
+    "vwo"
+   ],
+   "offset": [
+    "akuity",
+    "amplitude",
+    "growthbook",
+    "launchdarkly",
+    "optimizely",
+    "posthog",
+    "schematic",
+    "split",
+    "uniform",
+    "unleash"
+   ],
+   "page": [
+    "devcycle",
+    "dream-sports",
+    "flagsmith",
+    "freeplay",
+    "optimizely",
+    "posthog",
+    "seldon",
+    "statsig",
+    "vwo"
+   ],
+   "page_size": [
+    "dream-sports",
+    "flagsmith",
+    "freeplay",
+    "kinde",
+    "monetate",
+    "optimizely",
+    "posthog",
+    "seldon"
+   ],
+   "cursor": [
+    "amplitude",
+    "featureflip",
+    "flagsmith",
+    "launchdarkly",
+    "posthog",
+    "uniform"
+   ],
+   "page_token": [
+    "dream-sports",
+    "optimizely",
+    "seldon"
+   ],
+   "before": [
+    "launchdarkly",
+    "posthog",
+    "stigg"
+   ],
+   "after": [
+    "launchdarkly",
+    "posthog",
+    "stigg"
+   ],
+   "count": [
+    "amplitude",
+    "optimizely"
+   ],
+   "per_page": [
+    "devcycle",
+    "optimizely"
+   ],
+   "skip": [
+    "growthbook",
+    "optimizely"
+   ],
+   "start": [
+    "amplitude"
+   ],
+   "size": [
+    "convert"
+   ],
+   "starting_after": [
+    "kinde"
+   ],
+   "top": [
+    "optimizely"
+   ]
+  }
+ }
+}

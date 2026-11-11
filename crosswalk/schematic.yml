@@ -1,0 +1,41 @@
+provider: schematic
+apis_io: https://apis.io/providers/schematic/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - flags
+    properties:
+      name: name
+      description: description
+      id: id
+      key: key
+      metadata: maintainer
+      created_at: created_at
+      type: flag_type
+      updated_at: updated_at
+      rules: rules
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/schematic-openapi-v1.0.0.json#DELETE /flags/{flag_id}
+    - openapi/_original/schematic-openapi-v1.0.0.json#GET /flags
+    - openapi/_original/schematic-openapi-v1.0.0.json#GET /flags/{flag_id}
+    - openapi/_original/schematic-openapi-v1.0.0.json#POST /flags
+    - openapi/_original/schematic-openapi-v1.0.0.json#PUT /flags/{flag_id}
+  flag_environment:
+    path_segment:
+    - environments
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/schematic-openapi-v1.0.0.json#DELETE /environments/{environment_id}
+    - openapi/_original/schematic-openapi-v1.0.0.json#POST /environments
+    - openapi/_original/schematic-openapi-v1.0.0.json#PUT /environments/{environment_id}
+    - openapi/_original/schematic-openapi.yml#DELETE /environments/{environment_id}
+    - openapi/_original/schematic-openapi.yml#GET /environments

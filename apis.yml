@@ -1,0 +1,56 @@
+aid: common-feature-flags
+name: Feature Flags
+type: Common
+description: 'The common Feature Flags vocabulary, distilled from the harvested OpenAPI of 36 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Feature Flags
+- Feature Management
+- Experimentation
+- A/B Testing
+- Common Schema
+created: '2026-11-11'
+modified: '2026-11-11'
+url: https://raw.githubusercontent.com/api-commons/feature-flags/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-feature-flags:feature-flags
+  name: Common Feature Flags Interface
+  description: The Feature Flags interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/feature-flags
+  tags:
+  - Feature Flags
+  - Feature Management
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/adopters.yml
+  - type: Arazzo
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/arazzo.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: flag
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/schema/flag.json
+  - type: JSONSchema
+    name: flag_environment
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/schema/flag_environment.json
+  - type: JSONSchema
+    name: flag_segment
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/schema/flag_segment.json
+  - type: JSONSchema
+    name: experiment
+    url: https://raw.githubusercontent.com/api-commons/feature-flags/main/schema/experiment.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/feature-flags/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

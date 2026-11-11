@@ -1,0 +1,32 @@
+provider: convert
+apis_io: https://apis.io/providers/convert/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - features
+    properties:
+      name: name
+      description: description
+      enabled: status
+      id: id
+      key: key
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/convert-openapi.yml#GET /accounts/{account_id}/projects/{project_id}/features/{feature_id}
+    - openapi/_original/convert-openapi.yml#GET /accounts/{account_id}/projects/{project_id}/features/{feature_key}
+    - openapi/_original/convert-openapi.yml#POST /accounts/{account_id}/projects/{project_id}/features
+  flag_segment:
+    path_segment:
+    - audiences
+    properties:
+      description: description
+      id: id
+      name: name
+      rules: rules
+      type: type
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/convert-openapi.yml#GET /accounts/{account_id}/projects/{project_id}/audiences/{audience_id}
+    - openapi/_original/convert-openapi.yml#POST /accounts/{account_id}/projects/{project_id}/audiences

@@ -1,0 +1,76 @@
+context: feature-flags
+name: Feature Flags
+intro: >-
+  The common feature-flag vocabulary -- the flags that switch features, the environments they
+  are switched in, the segments they target and the experiments run on them -- distilled from
+  the APIs that already exist.
+tags: [Feature Flags, Feature Management, Experimentation, A/B Testing, Feature Toggles, Progressive Delivery]
+
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links,
+           value, results, next, previous, has_more, message, status_code, ids, next_page, previous_page,
+           page_info, cursor, total_count, per_page, total_pages, current_page, object, url, items]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id, _id]
+  created_at: [created, created_date, date_created, create_time, creation_date, created_on, creation_date_time]
+  updated_at: [updated, updated_date, modified_at, last_modified, date_modified, update_time, modified_date, modified, _last_modified]
+  metadata: [meta_data, custom_fields, custom, attributes, properties, tags, labels, _maintainer]
+  name: [title, display_name, label]
+  description: [notes, note, details]
+  key: [flag_key, feature_key, slug, identifier, api_key_name, code]
+
+concepts:
+  flag:
+    segments: [flags, flag, feature_flags, feature-flags, featureflags, features@projects|environments|flags, toggles, feature_toggles, gates, switches]
+    aliases:
+      enabled: [on, is_enabled, active, state, status, archived, kill_switch]
+      variations: [variants, values, treatments, options, rollout]
+      default_value: [default, default_variation, off_variation, fallthrough]
+      rules: [targeting, targeting_rules, conditions, strategies, constraints, rollout_rules]
+      type: [kind, flag_type, value_type]
+      project_id: [project, project_key, workspace_id, application_id]
+  flag_environment:
+    requires: [flag]
+    path: /flag-environments
+    segments: [environments, environment, envs]
+    aliases:
+      color: [colour]
+      is_production: [production, critical, protected]
+  flag_segment:
+    requires: [flag]
+    path: /flag-segments
+    segments: [segments, segment, audiences, audience, user_segments, cohorts]
+    aliases:
+      rules: [conditions, constraints, criteria, included, excluded]
+  experiment:
+    requires: [flag]
+    segments: [experiments, experiment, ab_tests, tests@experiments|ab]
+    aliases:
+      status: [state]
+      variations: [variants, arms, treatments]
+      metrics: [goals, metric, primary_metric, kpis]
+      started_at: [start_date, start_time, started]
+      ended_at: [end_date, end_time, stopped_at]
+
+findings:
+  - "A flag agrees on key, name, description, whether it is enabled, its type and created_at --
+    feature-flag platforms, experimentation tools and identity providers with flags (Statsig's
+    gates, PostHog, Kinde) share the toggle's shape almost completely."
+  - "Segments agree on name, description and rules; experiments on status, start and end -- the
+    targeting and the test share a shape as well as the flag."
+  - "The cohort is small (36 providers, 19 mapped): most flag platforms deliver flags through SDKs
+    and keep the management API secondary."
+decisions:
+  - "Gates, toggles and switches are flags; features count as flags only beneath a project or
+    environment (a bare `/features` is a product's feature list elsewhere)."
+  - "Environments are `/flag-environments` and segments `/flag-segments`: CI/CD owns
+    `/environments` and analytics owns cohorts. Audiences and cohorts count as flag segments only
+    at a provider that also serves flags."
+
+workflows:
+  - id: target-a-flag
+    summary: Create a segment and a flag, then read the flag back
+    steps:
+      - {op: createFlagSegment, id: segment}
+      - {op: createFlag, id: flag}
+      - {op: getFlag, id: read, path: {"{flag_id}": "$steps.flag.outputs.id"}}

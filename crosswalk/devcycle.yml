@@ -1,0 +1,68 @@
+provider: devcycle
+apis_io: https://apis.io/providers/devcycle/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - features
+    - flags
+    properties:
+      name: name
+      description: description
+      enabled: status
+      id: _id
+      key: key
+      metadata:
+      - metadata
+      - tags
+      created_at: createdAt
+      type: type
+      variations: variations
+      updated_at: updatedAt
+      project_id: _project
+      reason: reason
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/devcycle-bucketing-openapi.yaml#POST /ofrep/v1/evaluate/flags
+    - openapi/_original/devcycle-bucketing-openapi.yaml#POST /ofrep/v1/evaluate/flags/{key}
+    - openapi/_original/devcycle-management-openapi.json#DELETE /v1/projects/{project}/features/{feature}
+    - openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/features
+    - openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/features/{feature}
+  flag_environment:
+    path_segment:
+    - environments
+    properties:
+      name: name
+      id: _id
+      created_at: createdAt
+      key: key
+      updated_at: updatedAt
+      description: description
+      color: color
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/devcycle-management-openapi.json#DELETE /v1/projects/{project}/environments/{key}
+    - openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/environments
+    - openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/environments/{key}
+    - openapi/_original/devcycle-management-openapi.json#PATCH /v1/projects/{project}/environments/{key}
+    - openapi/_original/devcycle-management-openapi.json#POST /v1/projects/{project}/environments
+  flag_segment:
+    path_segment:
+    - audiences
+    properties:
+      description: description
+      id: _id
+      name: name
+      created_at: createdAt
+      metadata: tags
+      updated_at: updatedAt
+      created_by: _createdBy
+      project: _project
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/devcycle-management-openapi.json#DELETE /v1/projects/{project}/audiences/{key}
+    - openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/audiences
+    - openapi/_original/devcycle-management-openapi.json#GET /v1/projects/{project}/audiences/{key}
+    - openapi/_original/devcycle-management-openapi.json#PATCH /v1/projects/{project}/audiences/{key}
+    - openapi/_original/devcycle-management-openapi.json#PATCH /v1/semantic/projects/{project}/audiences/{key}

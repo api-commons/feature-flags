@@ -1,0 +1,13 @@
+provider: apptimize
+apis_io: https://apis.io/providers/apptimize/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - feature-flags
+    properties:
+      enabled: enabled
+    core_coverage: 0.125
+    evidence:
+    - openapi/_original/apptimize-rest-api-openapi.yml#GET /v1/users/{user-id}/feature-flags/{feature-flag-variable-name}

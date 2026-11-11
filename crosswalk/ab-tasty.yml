@@ -1,0 +1,12 @@
+provider: ab-tasty
+apis_io: https://apis.io/providers/ab-tasty/
+context: feature-flags
+generated: '2026-11-11'
+concepts:
+  flag:
+    path_segment:
+    - flags
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/decision-api-openapi.yml#POST /{environmentId}/flags
